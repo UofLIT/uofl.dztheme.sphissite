@@ -1,0 +1,19 @@
+﻿<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:plone="http://namespaces.plone.org/plone">
+
+    <include package="plone.app.portlets" />
+    <include package="Products.CMFCore" file="permissions.zcml" />
+
+    <plone:portlet
+            name="uofl.BootstrapRowPortlet"
+            interface=".bootstraprow.IBootstrapRowPortlet"
+            assignment=".bootstraprow.BootstrapRowAssignment"
+            view_permission="zope2.View"
+            edit_permission="cmf.ModifyPortalContent"
+            renderer=".bootstraprow.BootstrapRowRenderer"
+            addview=".bootstraprow.BootstrapRowAddForm"
+            editview="plone.portlet.static.static.EditForm"
+         />
+
+</configure>

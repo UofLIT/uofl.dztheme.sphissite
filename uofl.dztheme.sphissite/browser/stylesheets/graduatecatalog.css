@@ -1,0 +1,310 @@
+body.portaltype-graduatecatalog {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    overflow-x:hidden;
+}
+
+/*Degree title at top of page*/
+body.portaltype-graduatecatalog h1.graduatecatalog-title {
+   
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.3;
+    border-bottom:solid 1px black;
+}
+
+body.portaltype-graduatecatalog .wrapper {
+    background-image:url('++resource++uofl.p4basetheme.images/facback.png');
+    background-repeat: repeat-x;
+}
+
+/*List under title with major, degree, unit, and webpage*/
+body.portaltype-graduatecatalog #content-main ul.list li {
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    list-style: none;
+    text-align: right;
+    height: 30px;
+    vertical-align: middle;
+    padding-top: 4px;
+    margin-bottom: 3px;
+    line-height: 27px;
+}
+
+body.portaltype-graduatecatalog #graduatecatalog-title > div > ul li.major,
+body.portaltype-graduatecatalog #graduatecatalog-title > div > ul li.degree,
+body.portaltype-graduatecatalog #graduatecatalog-title > div > ul li.unit,
+body.portaltype-graduatecatalog #graduatecatalog-title > div > ul li.web-page {
+    line-height:16px !important;
+}
+
+body.portaltype-graduatecatalog #content-main ul.list li i {
+    opacity: .4;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body.portaltype-graduatecatalog ul.list {
+    list-style: none;
+    margin-left: 0px;
+}
+
+body.portaltype-graduatecatalog h3 {
+    font-size: 20px;
+    font-family: "proxima-nova-condensed", "HelveticaNeueLTStd Cn", "HelveticaNeue-Condensed", "Arial Narrow", Arial, sans-serif;
+    font-weight: 600;
+    border-bottom: solid 1px black;
+}
+
+body.portaltype-graduatecatalog h3:first-child {
+	line-height: 1.6;
+}
+/*These are the three main divisions of the center of page, each a rich-text area*/
+body.portaltype-graduatecatalog #content-main p,
+body.portaltype-graduatecatalog #content-body p,
+body.portaltype-graduatecatalog #core-content p {
+    font-size: 16px;
+    font-family: Georgia,sans-serif;
+    color: black;
+    line-height: 1.6;
+    padding-bottom: 15px;
+}
+/*This affects the contact information at the top-right of page*/
+body.portaltype-graduatecatalog div.portlet {
+    background-color: White;
+    padding: 25px 10px;
+    vertical-align: top !important;
+    font-size: 12px;
+    color: black;
+    list-style: none;
+    height: 30px;
+    padding-top: 4px;
+    margin-bottom: 3px;
+    line-height: 18px;
+    text-align:center;
+}
+/*these hr's surround the contact info heading*/
+body.portaltype-graduatecatalog hr {
+    height: 0px !important;
+    color: none !important;
+    border-top:hidden !important;
+    border-bottom:hidden !important;
+}
+/*these are the hr's located in the navigation on the left*/
+body.portaltype-graduatecatalog #site-information > hr{
+    height: 2px !important;
+    color: white !important;
+    opacity:1.0 !important;
+    background: #fff none repeat scroll 0 0;
+    border-top:2px white !important;
+    border-bottom:2px white !important;
+}
+
+body.portaltype-graduatecatalog div.portlet-header {
+    color: black;
+    font-family: "proxima-nova-condensed", "HelveticaNeueLTStd Cn", "HelveticaNeue-Condensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*breadcrumbs at top of page...*/
+body.portaltype-graduatecatalog #portal-breadcrumbs{
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    list-style: none;
+    text-align:left;
+    height: 30px;
+    vertical-align: top !important;
+    padding-top: 4px;
+    margin-bottom: 3px;
+    line-height: 27px;
+    padding-left:20px;
+}
+/*Navigation area on left side of page*/
+body.portaltype-graduatecatalog td.portlet ul#localnav a {
+
+    list-style-type:none !important;
+    text-align:inherit;
+    height: 30px;
+    vertical-align: top !important;
+    padding-top: 4px;
+    margin-bottom: 3px;
+    line-height: 27px;
+    color: white !important;
+    background-color: transparent !important;
+}
+/*individual local nav on left side*/
+body.portaltype-graduatecatalog ul#localnav li {
+    font-size: 14px;
+    list-style-type:none !important;
+    text-align:inherit;
+    vertical-align: top !important;
+    padding-top: 4px;
+    margin-bottom: 3px;
+    line-height: 27px;
+    color: white !important;
+    background-color: transparent !important;
+}
+
+body.portaltype-graduatecatalog ul#globalnav {
+    font-size: 14px;
+    list-style-type:none !important;
+    text-align:left;
+    vertical-align: top !important;
+    padding-top: 6px;
+    margin-bottom: 3px;
+    line-height: 27px;
+    color: white !important;
+    background-color: transparent !important;
+}
+/*Area containing the Graduate Catalog main link at top of page*/
+body.portaltype-graduatecatalog #dept-banner{
+    background-color: #990000;
+    color:white!important;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-bottom:0;
+    margin: 0px 0;
+    left:15px;
+}
+/*The Text in the link itself*/
+body.portaltype-graduatecatalog #dept-banner a{
+    font-size: 40%;
+    left:15px;
+    padding-left:20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    letter-spacing: 0.45em;
+    color:white!important;
+}
+
+body.portaltype-graduatecatalog ul#localnav {
+
+    list-style-type:none !important;
+    text-align:inherit;
+    height: 30px;
+    position:relative;
+    vertical-align: top !important;
+    padding-top: 4px;
+    margin-bottom: 3px;
+    line-height: 27px;
+    color: white !important;
+    background-color: transparent !important;
+}
+
+body.portaltype-graduatecatalog div.portlet-body, 
+body.portaltype-graduatecatalog div.portlet-body p {
+    font-size: 12px;
+    color: #666;
+    vertical-align:top !important;
+}
+
+body.portaltype-graduatecatalog div.portlet-body p {
+        padding-bottom: 1em;
+        margin-left: 5px;
+        margin-right: 5px;
+        vertical-align:top !important;
+}
+
+body.portaltype-graduatecatalog #content-wrapper {
+    width:100%;
+    vertical-align:top !important;
+}
+
+body.portaltype-graduatecatalog #content-wrapper td.portlet {
+    padding-bottom: 1em;
+    max-width: 33%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color:#c00;
+    vertical-align:top !important;
+}
+
+body.portaltype-graduatecatalog #content-wrapper li.navTreeItem a {
+    color: white;
+    background-color: transparent !important;
+}
+
+body.portaltype-graduatecatalog #content-wrapper td#graduatecatalog-contact {
+    padding-bottom: 1em;
+    line-height:11px;
+    max-width: 33%;
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align:top !important;
+}
+    
+
+@media (max-width: 767px) {
+body.portaltype-graduatecatalog #content-main, body.portaltype-graduatecatalog #content-main, body.portaltype-graduatecatalog #site-heading {
+	margin: 0 1em;
+    vertical-align:top !important;
+}
+
+body.portaltype-graduatecatalog #graduatecatalog-contact {
+	min-height: 1px;
+	border-right-width: 0;
+    vertical-align:top !important;
+}
+body.portaltype-graduatecatalog #content-main {
+	margin-bottom: 2em;
+    vertical-align:top !important;
+}
+
+.portaltype-graduatecatalog label {
+    font-weight: bold;
+    margin: 0px;
+    font-style: oblique;
+    text-decoration: underline;
+}
+.portaltype-graduatecatalog div.field div {
+    margin: 8px 20px 0px 20px;
+}
+
+}
+
+@media print {
+    /*Special Print CSS that pulls out the center content*/
+    body.portaltype-graduatecatalog td#middle-portlets{
+        display:block !important;
+        overflow-y:visible !important;
+        position:absolute;
+        left:25px;
+        border:0px !important;
+        font-size:12px !important;
+        font: 69% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+    }
+    /*Eliminates table outline in print screen*/
+    body.portaltype-graduatecatalog table,
+    body.portaltype-graduatecatalog td {
+        border:0 !important;
+    }
+    /*Elminates frivolous content*/
+    body.portaltype-graduatecatalog > .account-upper,
+    body.portaltype-graduatecatalog #dept-banner,
+    body.portaltype-graduatecatalog #dept-banner-wrapper,
+    body.portaltype-graduatecatalog #drawer,
+    body.portaltype-graduatecatalog #dept-title,
+    body.portaltype-graduatecatalog #site-information,
+    body.portaltype-graduatecatalog .uofl-navbar,
+    body.portaltype-graduatecatalog .phone_nav,
+    body.portaltype-graduatecatalog .sidebar,
+    body.portaltype-graduatecatalog #left-sidebar,
+    body.portaltype-graduatecatalog #right-sidebar,
+    body.portaltype-graduatecatalog #breadcrumbs,
+    body.portaltype-graduatecatalog #social-counters,
+    body.portaltype-graduatecatalog #prefooter_wrapper,
+    body.portaltype-graduatecatalog footer,
+    body.portaltype-graduatecatalog .carousel,
+    body.portaltype-graduatecatalog .modal-footer,
+    body.portaltype-graduatecatalog .close,
+    body.portaltype-graduatecatalog .account-lower,
+    body.portaltype-graduatecatalog #portal-breadcrumbs,
+    body.portaltype-graduatecatalog #hero-rows{
+        display: none !important;
+    }
+}

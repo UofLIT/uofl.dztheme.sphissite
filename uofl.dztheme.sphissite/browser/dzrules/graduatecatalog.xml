@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:fn="http://www.w3.org/2006/xpath-functions">
+
+
+  <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
+  
+  <xsl:template css:match="ul.globalSectionsLevel1 > li" mode="subnav">
+    <xsl:copy>
+      <xsl:if css:test=".selected">
+        <xsl:attribute name="class">active</xsl:attribute>
+      </xsl:if>
+      <xsl:element name="a">
+        <xsl:copy-of select="a/@href | a/@title" />
+        <xsl:copy-of select="a/span/text()" />
+      </xsl:element>
+    </xsl:copy>
+  </xsl:template>
+
+  <replace theme-children="//ul[@id='localnav']">
+      <xsl:for-each select="//ul[@id='portal-globalnav']/li">
+          <xsl:copy>
+              <xsl:if css:test=".selected">
+                  <xsl:attribute name="class">active</xsl:attribute>
+              </xsl:if>
+              <xsl:element name="a">
+                  <xsl:copy-of select="a/@href|a/@title" />
+                  <xsl:value-of select="a//*/text()" />
+              </xsl:element>
+              <xsl:if test="self::*[contains(concat(' ', normalize-space(@class), ' '), ' selected ')]/a[contains(concat(' ', normalize-space(@class), ' '), ' hasChildrens ')]">
+                  <ul class="nav nav-list">
+                      <xsl:copy-of select="./ul/li" />
+                  </ul>
+              </xsl:if>
+          </xsl:copy>
+      </xsl:for-each>
+  </replace>
+  
+  
+  <replace css:theme-children="h1.graduatecatalog-title">
+    <xsl:value-of css:select="#form-widgets-program_title"/>
+  </replace>
+  <drop css:theme="li.major" if-content="//span[@id='form-widgets-major'] = ''" />
+  <replace css:theme-children="li.major">
+      <b>
+          <xsl:text>Major: </xsl:text>
+      </b>
+      <xsl:value-of css:select="#form-widgets-major" />
+  </replace>
+
+  <drop css:theme="li.degree" if-content="//span[@id='form-widgets-degree'] = ''" />
+  <replace css:theme-children="li.degree">
+      <b>
+          <xsl:text>Degree Awarded: </xsl:text>
+      </b>
+      <xsl:value-of css:select="#form-widgets-degree" />
+  </replace>
+
+  <drop css:theme="li.unit" if-content="//span[@id='form-widgets-unit'] = ''" />
+  <replace css:theme-children="li.unit">
+      <b>
+          <xsl:text>Unit: </xsl:text>
+      </b>
+      <xsl:value-of css:select="#form-widgets-unit" />
+  </replace>
+
+  <drop css:theme="li.web-page" if-content="//span[@id='form-widgets-web_page'] = ''" />
+  <replace css:theme-children="li.web-page">
+      <b>
+          <xsl:text>Program Webpage: </xsl:text>
+      </b>
+      <xsl:value-of css:select="#form-widgets-web_page" />
+  </replace>
+
+
+  <replace css:theme="div.content-body" css:content-children="#form-widgets-program_description" />
+  <replace css:theme-children="h2.curriculum" css:content-children="#form-widgets-curriculum" />
+  <replace css:theme-children="h3.content-body" css:content-children="#form-widgets-dept_faculty" />
+  <drop theme="//div[@id='contact_info']/.." if-not-content="//div[@id='form-widgets-contact_info']/node()" />
+  <replace css:theme-children="#contact_info" css:content-children="#form-widgets-contact_info" />
+  <after css:theme="#contact-info" css:content="#form-widgets-contact_degree"/>
+</rules>

@@ -1,0 +1,34 @@
+.breadcrumb-minimal {
+    margin: 0px 0px 20px;
+}
+
+.breadcrumb-minimal li {
+    display: inline-block;
+}
+
+.breadcrumb-minimal .divider {
+    padding: 0px 5px;
+}
+
+.breadcrumb-minimal li,
+.breadcrumb-minimal li a 
+{
+    font-size: 110%;
+    color: #000;
+    opacity: 0.5;
+}
+
+.breadcrumb-minimal li.active a 
+{
+    opacity: 0.9;
+}
+
+.breadcrumb-minimal li.active {
+    color:  #333333;
+}
+
+#breadcrumbs 
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}

@@ -1,0 +1,18 @@
+<tal:block condition="not: view/anonymous">
+<li class="dropdown dropup">
+    <a class="dropdown-toggle" data-toggle="dropdown"
+        tal:attributes="href view/homelink_url"><span tal:content="view/user_name">My Accounts</span><b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        <li tal:repeat="action view/user_actions"
+            tal:attributes="id string:personaltools-${action/id}">
+            <a href=""
+               tal:attributes="href action/url;
+                               target action/link_target|nothing"
+               tal:content="action/title"
+               i18n:translate="">
+                action title
+            </a>
+        </li>
+    </ul>
+</li>
+</tal:block>

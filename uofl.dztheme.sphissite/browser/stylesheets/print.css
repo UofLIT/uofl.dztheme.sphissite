@@ -1,0 +1,169 @@
+@media print {
+    body > .account-upper,
+    #dept-banner,
+    #dept-banner-wrapper,
+    #drawer,
+    #dept-title,
+    #site-information,
+    .uofl-navbar,
+    .phone_nav, 
+    .sidebar,
+    #left-sidebar,
+    #right-sidebar,
+    #breadcrumbs,
+    #social-counters,
+    #prefooter_wrapper,
+    footer,
+    .carousel,
+    .modal-footer,
+    .close,
+    .account-lower,
+    #hero-rows,
+    #middle-portlets {
+        display: none !important;
+    }
+
+    body {
+        background-image: none !important;
+    }
+
+    body.departmental {
+        background: none !important;
+    }
+
+    body > .container#core-content,
+    body > .container#plone-content  { 
+        display: block !important; 
+    } 
+         
+    #core-content > div > div,
+    #plone-content,
+    #plone-content > div > div,
+    div#content-wrapper[class~=span] { 
+        border-top: 0px !important; 
+    }
+
+    .breadcrumb-minimal {
+        border-bottom: 0 !important;
+    }
+
+    body.informational {
+        font-family: "proxima-nova","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    #content-body {
+        padding-bottom: 0px;
+    }
+
+    #content-wrapper::after, 
+    #core-content .sidebar .accordion::after,
+    .phone_nav::after,
+    #content-main,
+    #plone-content {
+        background: none !important;
+    }
+
+    .modal {
+        border: 1px solid;
+        border-radius: 4px;
+        left: 50%;
+        margin-left: -280px; 
+        position: relative; 
+        width: 560px;
+        display:block;
+        padding-left: 1%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .modal.hide.fade.in,
+    .modal.fade.in {
+        display:block;
+    }
+
+    .modal.hide.fade,
+    .modal.fade {
+        display: none;
+    }     
+
+    .nav-tabs > li {
+        display: inline;
+        margin-right: 1%;
+    }
+
+    .accordion-body.in.collapse {
+        display:initial;
+    }
+
+    .accordion-group,
+    .popover {
+        border: 1px solid;
+        border-radius: 4px;
+        margin-bottom: 1%;
+        padding: 1%;
+    }
+
+    .accordion-heading {
+        border-bottom: 1px solid;
+        padding-bottom: 1%;
+    }
+
+    .field,
+    .suppressVisualEditor {
+        margin-top: 2% !important;
+        margin-bottom: 2% !important;
+    }
+
+    .dropdown-menu {
+        border: 1px solid;
+        border-radius: 4px;
+        display:block;
+        position:initial;
+        max-width: 300px;
+        margin: 2px 0 0;
+    }
+
+    .dropdown-menu > li {
+        padding: 1%;
+    }
+
+    .btn,
+    a.btn {
+        border: 1px solid;
+        border-radius: 4px;
+        background-color: #d1e0e0;
+        padding: 1%;
+    }
+
+    img {
+        page-break-before:auto;
+        page-break-after:auto;
+        page-break-inside: avoid;
+    }
+
+    img.image-left {
+        float: left;
+        margin: 0.5em 2em 0.5em 0;
+    }
+
+    img.image-right {
+        float: right;
+        margin: 0.5em 0 0.5em 2em;
+    }
+
+    table,td,th {
+        border:solid #dddddd !important;
+        border-width:1px !important;
+    }
+
+    td,th {
+        padding: 0.5em 1em;
+    }
+
+    .callout {
+        background: none repeat scroll 0 0 #eee !important;
+        border-left: 1em solid #ccc !important;
+        clear: both;
+        padding: 1em;
+    }
+}

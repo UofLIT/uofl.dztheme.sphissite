@@ -1,0 +1,327 @@
+﻿/* Footer */
+footer {
+    font-size: 75%;
+    line-height: 266%;
+    text-transform: uppercase;
+    min-height: 45px;
+}
+
+    footer > div > div > div {
+        padding-top: 9px;
+    }
+
+    footer.white {
+        background-color: #fff;
+    }
+
+    footer.grey {
+        background-color: #666;
+    }
+
+    footer.black {
+        background-color: #262626;
+		border-top: 1px solid #8b8b8b;
+    }
+
+    footer .nav {
+        margin: 0;
+    }
+
+    footer.white > div.container-fluid > div.row-fluid {
+        border-top: 1px solid #eaeaea;
+    }
+
+    footer.black > div.container-fluid > div.row-fluid {
+        border-top: 1px solid #2e2e2e;
+    }
+
+    footer.white .nav a {
+        color: #999999;
+    }
+    footer.white .nav a:hover {
+		color: #ad0000;
+	}
+
+    footer.grey .nav a {
+        color: #ccc;
+		text-shadow: 0 1px 0 #484848;
+    }
+
+    footer.black .nav a {
+        color: #666666;
+    }
+
+    footer .hidden-phone .nav a:hover {
+        color: #fff;
+		text-decoration: underline !important;
+    }
+    
+    footer.white .hidden-phone .nav a:hover {
+        color: #ad0000;
+    }
+
+    footer .nav-pills > li > a {
+        margin: 0;
+    }
+
+    footer .nav > li > a:hover {
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    footer.grey i {
+        margin-left: 3px;
+        opacity: 0.5;
+    }
+
+    footer.white i {
+        margin-left: 3px;
+        opacity: 0.3;
+    }
+
+#copy a {
+	padding-left: 0;
+}
+#login-bottom > a {
+	padding-right: 0;
+}
+#login-bottom.open > a {
+	background-color: transparent;
+	color: #999;
+}
+
+footer .nav .dropdown-menu a {
+	text-shadow: 0 0 0 transparent;
+	color: #666;
+}
+footer .nav .dropdown-menu a:hover {
+	background-color: #666;
+	color: #fff;
+}
+
+/* Mobile */
+
+footer .visible-phone 
+{
+    padding: 15px;
+}
+
+footer .visible-phone a:hover 
+{
+    text-decoration: none;
+}
+
+footer .visible-phone .navbar 
+{
+    padding-top: 0px;
+    margin-bottom: 5px;
+}
+
+footer .visible-phone .navbar-inner
+{
+    background-image: none;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+            padding: 0;
+}
+
+footer .visible-phone .navbar-inner,
+footer .visible-phone .nav-collapse .nav > li > a:hover 
+{
+    border-radius: 0px;
+}
+
+footer .visible-phone .icon-chevron-right 
+{
+    margin-top: 13px;
+}
+
+footer .visible-phone a
+{
+    display: block;
+    line-height: 36px;
+}
+
+footer .visible-phone button.btn-navbar 
+{
+    margin-right: 20px;
+}
+
+footer .visible-phone .nav-collapse .nav > li > a 
+{
+    font-weight: normal;
+    text-transform: capitalize;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+}
+
+footer .visible-phone .divider 
+{
+    height: 0px;
+}
+
+footer .visible-phone .navbar a,
+footer .visible-phone .footer-item 
+{
+    padding: 0 20px;
+    line-height: 40px;
+}
+    /* --- White ---- */
+    
+    footer.white .visible-phone .nav-collapse .nav > li > a 
+    {
+        color: #7b7b7b;
+    }
+    
+    footer.white .visible-phone .divider 
+    {
+        background: #fff;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #fff;
+    }
+
+    footer.white .visible-phone .navbar-inner 
+    {
+        background-color: #f3f3f3;
+    }
+    
+    footer.white .visible-phone .navbar a,
+    footer.white .visible-phone .footer-item 
+    {
+        text-shadow: 0 1px 0 #fff;
+    }
+    
+    footer.white .visible-phone a,
+    footer.white .visible-phone .footer-item 
+    {
+        color: #666666;
+    }
+    
+    footer.white .visible-phone button 
+    {
+        opacity: 0.3;
+    }
+    
+    footer.white .visible-phone .nav-collapse .nav > li 
+    {
+        background: #eaeaea;
+    }
+    
+    footer.white .visible-phone .nav-collapse .nav > li > a:hover
+    {
+        color: #ad0000;
+        background-color: #ccc;
+        text-shadow:0 1px 0 #EAEAEA;
+    }
+    
+    footer.white .row > a 
+    {
+        color: #999;
+    }
+    
+    /* --- GREY --- */
+    
+    footer.grey .visible-phone .nav-collapse .nav > li > a 
+    {
+        color: #bababa;
+    }
+    
+    footer.grey .visible-phone .divider 
+    {
+        background: #fff;
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #484848;
+    }
+    
+    footer.grey .visible-phone .navbar-inner 
+    {
+        background-color: #484848;
+    }
+    
+    footer.grey .visible-phone .navbar a,
+    footer.grey .visible-phone .footer-item 
+    {
+        text-shadow: 0 1px 0 #333;
+    }
+    
+    footer.grey .visible-phone a,
+    footer.grey .visible-phone .footer-item 
+    {
+        color: #bababa;
+    }
+    
+    footer.grey .visible-phone button 
+    {
+        opacity: 0.6;
+    }
+    
+    footer.grey .visible-phone .nav-collapse .nav > li 
+    {
+        background: #3e3e3e;
+    }
+    
+    footer.grey .visible-phone .nav-collapse .nav > li > a:hover
+    {
+        color: #fff;
+        background-color: #222;
+    }
+    
+    footer.grey .row > a 
+    {
+        color: #bababa;
+    }
+    
+    /* --- BLACK --- */
+    
+    footer.black .visible-phone .nav-collapse .nav > li > a 
+    {
+        color: #999;
+    }
+    
+    footer.black .visible-phone .divider 
+    {
+        background: #fff;
+        border-top: 1px solid #262626;
+        border-bottom: 1px solid 262626;
+    }
+    
+    footer.black .visible-phone .navbar-inner 
+    {
+        background-color: #151515;
+    }
+    
+    footer.black .visible-phone .navbar a,
+    footer.black .visible-phone .footer-item 
+    {
+        text-shadow: 0 1px 0 #333;
+    }
+    
+    footer.black .visible-phone a,
+    footer.black .visible-phone .footer-item 
+    {
+        color: #999;
+    }
+    
+    footer.black .visible-phone button,
+    footer.black i
+    {
+        opacity: 0.6;
+    }
+    
+    footer.black .visible-phone .nav-collapse .nav > li 
+    {
+        background: #000;
+    }
+    
+    footer.black .visible-phone .nav-collapse .nav > li > a:hover
+    {
+        color: #ddd;
+        background-color: #222;
+    }
+    
+    footer.black .row > a 
+    {
+        color: #999;
+    }

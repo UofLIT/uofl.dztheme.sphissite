@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Marketing Theme Home</title>
+    <meta name="description" content="">
+    <meta name="author" content="UofL Web Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/headers.css" />
+    <link rel="stylesheet" type="text/css" href="css/breadcrumbs.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="css/portlets.css" />
+    <link rel="stylesheet" type="text/css" href="css/prefooters.css" />
+    <link rel="stylesheet" type="text/css" href="css/footers.css" />
+    <link id="themecss" rel="stylesheet" type="text/css" href="css/themes/marketing.css" />
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery-noconflict.js" type="text/javascript"></script>
+</head>
+<body>
+    <header class="uofl account-lower">
+        <div id="upperbar">
+            <div class="container visible-desktop">
+                <ul class="nav nav-pills pull-right account">
+                    <li>
+                        <a href="http://louisville.edu">
+                            <i class="icon-home icon-white"></i>louisville.edu
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <i class="icon-user icon-white"></i>My Accounts<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Exchange</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">CardMail</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">PeopleSoft</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Blackboard</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Plone</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="lowerbar">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav nav-pills pull-right account">
+                        <li>
+                            <a href="http://louisville.edu">
+                                <i class="icon-home icon-black"></i>louisville.edu
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-user icon-black"></i>My Accounts<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Exchange</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">CardMail</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">PeopleSoft</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Blackboard</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Plone</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-left" id="logo">
+                    <a href="#">
+                        <img src="img/logo-desktop.png">
+                    </a>
+                </div>
+                <form class="search pull-right visible-desktop" method="get"
+                      action="http://search.louisville.edu/search">
+                    <label for="q">Search UofL</label>
+                    <input type="search" class="search" placeholder="Search pages, people" name="q" size="25" results="10">
+                    <button type="submit" value="Go" name="btnHeaderSearch" class="btn">Go</button>
+                    <input type="hidden" value="0" name="entqr">
+                    <input type="hidden" value="1" name="ud">
+                    <input type="hidden" value="date:D:L:d1" name="sort">
+                    <input type="hidden" value="xml_no_dtd" name="output">
+                    <input type="hidden" value="UTF-8" name="oe">
+                    <input type="hidden" value="UTF-8" name="ie">
+                    <input type="hidden" value="uofl-frontend" name="client">
+                    <input type="hidden" value="uofl-frontend" name="proxystylesheet">
+                    <input type="hidden" value="default_collection" name="site">
+                </form>
+                <div class="nav pull-right visible-desktop" id="tertiary-menu">
+                    <ul class="nav nav-pills">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                Apply<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Undergraduate</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Transfer</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Graduate</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Dentistry</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Law</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">MBA</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#">Donate</a></li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown"
+                               class="dropdown-toggle">Campuses<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Belknap</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">HSC</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Online</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">International</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a id="drawer-toggle" class="btn pull-right hidden-desktop" data-toggle="collapse"
+                   data-target="#drawer">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+        </div>
+        <div id="drawer" class="nav-collapse hidden-desktop">
+            <table>
+                <tr>
+                    <td>
+                        <a id="nav-drawer-home-link" href="http://louisville.edu">
+                            <i class="icon-home
+icon-black"></i>louisville.edu
+                        </a>
+                    </td>
+                    <td>
+                        <form class="header-search" method="get" action="http://search.louisville.edu/search">
+                            <label for="q">Search UofL</label>
+                            <input type="search" class="search input-medium" placeholder="Search pages, people"
+                                   name="q" size="25" results="10">
+                            <button type="submit" value="Go" name="btnHeaderSearch" class="btn">Go</button>
+                            <input type="hidden" value="0" name="entqr">
+                            <input type="hidden" value="1" name="ud">
+                            <input type="hidden" value="date:D:L:d1" name="sort">
+                            <input type="hidden" value="xml_no_dtd" name="output">
+                            <input type="hidden" value="UTF-8" name="oe">
+                            <input type="hidden" value="UTF-8" name="ie">
+                            <input type="hidden" value="uofl-frontend" name="client">
+                            <input type="hidden" value="uofl-frontend" name="proxystylesheet">
+                            <input type="hidden" value="default_collection" name="site">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
+    <div id="faculty-information" class="container">
+        <div class="row">
+            <div id="site-heading" class="span12">
+                <h1 class="faculty-name">
+                    David L. Wiegman, Ph.D.
+                </h1>
+                <h2 class="faculty-title">
+                    Professor, Associate Vice President for Health Affairs, Vice Dean for Academic Affairs
+                    in the School of Medicine
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="plone-content" class="container">
+            <div class="row">
+                <div id="left-sidebar" class="span3">
+                    <div id="faculty-photo">
+                        <img src="http://placehold.it/260x346&text=No+Image+Available" />
+                    </div>
+                    <div id="faculty-contact">
+                        <ul class="contact">
+                            <li class="address">313B Abell Building<i class="icon-home"></i></li>
+                            <li class="phone">(502) 852-0450<i class="icon-phone"></i></li>
+                            <li class="fax">(502) 852-0234<i class="icon-print"></i></li>
+                            <li class="email">dw@louisville.edu<i class="icon-envelope"></i></li>
+                            <li class="cv">Curriculum Vitae<i class="icon-download"></i></li>
+                            <li class="social">
+                                <img src="++resource++uofl.p4basetheme.images/facebook.png" alt="facebook" />
+                                <img src="++resource++uofl.p4basetheme.images/linkedin.png" alt="linkedin" />
+                                <img src="++resource++uofl.p4basetheme.images/twitter.png" alt="twitter" />
+                                <img src="++resource++uofl.p4basetheme.images/wordpress.png" alt="wordpress" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="content-main" class="span6">
+                    <h3>About</h3>
+                    <div class="content-body">
+                        <p>
+                            Dr. Wiegman and a professional staff of 80 (including 11 assistant/associate deans)
+                            are responsible for the academic programs (including accreditation, recruitment,
+                            admissions, financial aid, student affairs, counseling, curriculum, standardized
+                            patients, human simulation, faculty affairs, rural and minority affairs, regional
+                            campuses, international programs, and affirmative action) of the School of Medicine
+                            and for coordination of the academic programs of the Health Sciences Center
+                            (<a>Schools of Dentistry</a>, <a>Medicine</a>, <a>Nursing</a>, and <a>Public Health</a>).
+                        </p>
+                        <p>
+                            Dr. Wiegman is currently the recipient of a Commonwealth of Kentucky Grant focused
+                            on rural medicine through the Trover Campus Program with a total value of almost
+                            $12,000,000. He is also the recipient of a $941,000 stimulus grant from the U.S.
+                            Department of Health and Human Services to create a broadcast center for medical
+                            education throughout the state. In addition, he has recently been the co-recipient
+                            of two Robert Wood Johnson Foundation Grants for medical education ($500,000). At
+                            present, Dr. Wiegman's educational research interests include: comparative international
+                            medical education, curriculum development, and the assessment of educational outcomes.
+                        </p>
+                        <p>
+                            At an earlier time in his career as a full-time scientist with research interests
+                            in the microcirculation, hypertension, and exercise physiology, Dr. Wiegman authored/coauthored
+                            over 100 publications including 30 full-length research papers and sections of two
+                            medical textbooks. He was Principal Investigator/Co-Investigator on ten research
+                            grants funded at a total of $1,000,000.
+                        </p>
+                        <p>
+                            Dr. Wiegman has remained very active within the Department of Physiology. He serves
+                            as an examiner for Masters and Ph.D. Qualifying Exams. He teaches in the Medical
+                            Physiology course and several advanced physiology courses.
+                        </p>
+                        <p>
+                            At the School wide level, Dr. Wiegman always makes time for meeting with and counseling/advising
+                            undergraduate, graduate and professional students and also faculty at all levels
+                            in their efforts for educational and career development. advancement.
+                        </p>
+                    </div>
+                </div>
+                <div id="right-sidebar" class="span3">
+                    <div class="portlet">
+                        <div id="education" class="portlet-header">
+                            Education
+                        </div>
+                        <div id="edubody" class="portlet-body">
+                            <p>
+                                Post-doctoral training, Developmental Neuropsychology and Electrophysiology Lab,
+                                University of Louisville, 2003-2004
+                            </p>
+                            <p>PhD Philosophy, University of Chicago, 2002</p>
+                            <p>BA Philosophy, Georgetown University, 1989</p>
+                        </div>
+                    </div>
+                    <div class="portlet">
+                        <div id="pubs" class="portlet-header">
+                            Recent Publications
+                        </div>
+                        <div id="pubsbody" class="portlet-body">
+                            <p>
+                                Wiegman, D.L.: Medical Education in the United States, 1999. (Presented by D.L. Wiegman
+                                in Chengdu and Luzhou, China)
+                            </p>
+                            <p>
+                                Wiegman, D.L., R.F. Aud, and R.N. Patton: An Interdisciplinary Health Experience
+                                for Students in Medically Underserved Communities. Medical Teacher 22:74, 2000.
+                                (Presented by D.L. Wiegman in Linkoping, Sweden)
+                            </p>
+                            <p>
+                                Wiegman, D.L., M.S. Joshua and M.E. Byrne: A Summer Prematriculation Program for
+                                At-risk Medical Students. Medical Teacher, 2001. (Presented by D.L. Wiegman in Berlin,
+                                Germany)
+                            </p>
+                            <p>
+                                Kaplan, J.A., R.B. Greenberg, D.L. Wiegman, and M.P. Pfeifer: New Educational Initiatives
+                                at the University of Louisville School of Medicine. Louisville Medicine 48:379-381,
+                                2001.
+                            </p>
+                            <p>
+                                Wiegman, D.L., M.P. Pfeifer, F.E. Loyd, and M.S. Goodrow: Expanded Educational Applications
+                                of Patient Simulators. Medical Teacher, 2003. ( Presented by D.L. Wiegman in Lisbon,
+                                Portugal)
+                            </p>
+                            <p>
+                                Pfeifer, M.P., D.L. Wiegman, and G. Wesley: An Integrated Approach to Learning-By-Doing
+                                in Medical Education. Medical Teacher, 2003.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="grey">
+        <div class="container">
+            <div class="row">
+                <div class="span3">
+                    <ul class="nav nav-pills">
+                        <li id="copy">
+                            <a title="Go to louisville.edu" rel="tooltip"
+                               href="http://louisville.edu/">&copy; University of Louisville</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="span7">
+                    <ul class="nav nav-pills">
+                        <li><a href="#">Contact</a></li>
+                        <li class="dropdown dropup">
+                            <a href="#" data-toggle="dropdown"
+                               class="dropdown-toggle">Apply</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Undergraduate</a></li>
+                                <li><a href="#">Transfer</a></li>
+                                <li><a href="#">Graduate</a></li>
+                                <li><a href="#">Dentistry</a></li>
+                                <li><a href="#">Law</a></li>
+                                <li><a href="#">MBA</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Emergency</a></li>
+                    </ul>
+                    <!-- Fix this -->
+                </div>
+                <div class="span2">
+                    <ul class="nav nav-pills pull-right">
+                        <li id="login-bottom" class="dropdown dropup">
+                            <a href="#" data-toggle="dropdown"
+                               class="dropdown-toggle">Login<i class="icon-cog"></i></a>
+                            <ul class="dropdown-menu bottom-up">
+                                <li><a href="#">Exchange</a></li>
+                                <li><a href="#">CardMail</a></li>
+                                <li><a href="#">Blackboard</a></li>
+                                <li><a href="#">ULink</a></li>
+                                <li><a href="#">PeopleSoft</a></li>
+                                <li><a href="#">Plone</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="fb-root"></div>
+    <script id="fb-js" type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script class="calendarjs" type="text/javascript" src="js/plugins.js"></script>
+    <script class="calendarjs" type="text/javascript" src="js/calendar.js"></script>
+    <script class="calendarjs" type="text/javascript">
+        jqbs(document).ready(function () {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+            jqbs('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                editable: false,
+                disableDragging: false,
+                disableResizing: false,
+                startParam: 'start:int',
+                endParam: 'end:int',
+                events: 'solgemafullcalendarevents',
+                eventClick: function (event) {
+                    if (event.url) {
+                        $.get(event.url, function (data) {
+                            $.fancybox(data, { maxWidth: 800 });
+                        });
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">        jqbs('.dropdown-toggle').dropdown()</script>
+    <script type="text/javascript">        jqbs('#portlet-accordion').tab('show')</script>
+    <script type="text/javascript">        jqbs('#featured-links-accordion').tab('show')</script>
+</body>
+</html>

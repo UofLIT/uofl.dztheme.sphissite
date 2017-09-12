@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:fn="http://www.w3.org/2006/xpath-functions">
+
+    <replace css:theme-children="h1.faculty-name" css:content-children="#parent-fieldname-title" />
+    <replace css:theme-children="h2.faculty-title" css:content-children="#form-widgets-position" />
+
+    <replace css:theme="#faculty-photo > img" if-not-content="normalize-space(//span[@id='form-widgets-photo']/span) = 'No image'">
+            <xsl:element name="img">
+                <xsl:attribute name="height">346</xsl:attribute>
+                <xsl:attribute name="width">260</xsl:attribute>
+                <xsl:attribute name="src">
+                    <xsl:value-of select="//span[@id='form-widgets-photo']/img/@src" />
+                </xsl:attribute>
+                <xsl:attribute name="alt">Photo</xsl:attribute>
+            </xsl:element>
+    </replace>
+
+    <drop css:theme="li.address" if-content="//span[@id='form-widgets-office_address'] = ''" />
+    <replace css:theme-children="li.address">
+        <xsl:value-of css:select="#form-widgets-office_address" />
+        <xsl:element name="i">
+            <xsl:attribute name="class">icon-home</xsl:attribute>
+        </xsl:element>
+    </replace>
+
+    <drop css:theme="li.phone" if-content="//span[@id='form-widgets-primary_phone_number'] = ''" />
+    <replace css:theme-children="li.phone">
+        <xsl:value-of css:select="#form-widgets-primary_phone_number" />
+        <xsl:element name="i">
+            <xsl:attribute name="class">icon-phone</xsl:attribute>
+        </xsl:element>
+    </replace>
+
+    <drop css:theme="li.fax" if-content="//span[@id='form-widgets-secondary_phone_number_fax_'] = ''" />
+    <replace css:theme-children="li.fax">
+        <xsl:value-of css:select="#form-widgets-secondary_phone_number_fax_" />
+        <xsl:element name="i">
+            <xsl:attribute name="class">icon-print</xsl:attribute>
+        </xsl:element>
+    </replace>
+
+    <drop css:theme="li.email" if-content="//span[@id='form-widgets-email_address'] = ''" />
+    <replace css:theme-children="li.email">
+        <xsl:value-of css:select="#form-widgets-email_address" />
+        <xsl:element name="i">
+            <xsl:attribute name="class">icon-envelope</xsl:attribute>
+        </xsl:element>
+    </replace>
+
+    <drop css:theme="li.cv" if-content="normalize-space(//span[@id='form-widgets-curriculum_vitae']/span) = 'No file'" />
+    <replace css:theme-children="li.cv">
+        Curriculum Vitae
+        <xsl:element name="a">
+            <xsl:attribute name="href">
+                <xsl:value-of select="//span[@id='form-widgets-curriculum_vitae']//a/@href" />
+            </xsl:attribute>
+            <xsl:element name="i">
+                <xsl:attribute name="class">icon-download</xsl:attribute>
+            </xsl:element>
+        </xsl:element>
+    </replace>
+
+    <drop css:theme="li.social" if="//span[@id='form-widgets-facebook_address'] = '' and //span[@id='form-widgets-linkedin_address'] = '' and //span[@id='form-widgets-twitter_address'] = '' and //span[@id='form-widgets-wordpress_address'] = ''" />
+    <replace css:theme-children="li.social">
+        <xsl:for-each select="//span[@id='form-widgets-facebook_address'] | //span[@id='form-widgets-linkedin_address'] | //span[@id='form-widgets-twitter_address'] | //span[@id='form-widgets-wordpress_address']">
+            <xsl:choose>
+                <xsl:when css:test="#form-widgets-facebook_address">
+                    <xsl:if test="./node()">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="." />
+                            </xsl:attribute>
+                            <xsl:element name="img">
+                                <xsl:attribute name="src">++resource++uofl.p4basetheme.images/facebook.png</xsl:attribute>
+                                <xsl:attribute name="alt">facebook</xsl:attribute>
+                            </xsl:element>
+                        </xsl:element>
+                    </xsl:if>
+                </xsl:when>
+                <xsl:when css:test="#form-widgets-linkedin_address">
+                    <xsl:if test="./node()">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="." />
+                            </xsl:attribute>
+                            <xsl:element name="img">
+                                <xsl:attribute name="src">++resource++uofl.p4basetheme.images/linkedin.png</xsl:attribute>
+                                <xsl:attribute name="alt">linkedin</xsl:attribute>
+                            </xsl:element>
+                        </xsl:element>
+                    </xsl:if>
+                </xsl:when>
+                <xsl:when css:test="#form-widgets-twitter_address">
+                    <xsl:if test="./node()">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="." />
+                            </xsl:attribute>
+                            <xsl:element name="img">
+                                <xsl:attribute name="src">++resource++uofl.p4basetheme.images/twitter.png</xsl:attribute>
+                                <xsl:attribute name="alt">twitter</xsl:attribute>
+                            </xsl:element>
+                        </xsl:element>
+                    </xsl:if>
+                </xsl:when>
+                <xsl:when css:test="#form-widgets-wordpress_address">
+                    <xsl:if test="./node()">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="." />
+                            </xsl:attribute>
+                            <xsl:element name="img">
+                                <xsl:attribute name="src">++resource++uofl.p4basetheme.images/wordpress.png</xsl:attribute>
+                                <xsl:attribute name="alt">wordpress</xsl:attribute>
+                            </xsl:element>
+                        </xsl:element>
+                    </xsl:if>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:for-each>
+    </replace>
+
+    <replace css:theme-children="div.content-body" css:content-children="#form-widgets-about" />
+    <drop theme="//div[@id='education']/.." if-not-content="//div[@id='form-widgets-education']/node()" />
+    <replace css:theme-children="#edubody" css:content-children="#form-widgets-education" />
+    <drop theme="//div[@id='pubs']/.." if-not-content="//div[@id='form-widgets-recent_publications']/node()" />
+    <replace css:theme-children="#pubsbody" css:content-children="#form-widgets-recent_publications" />
+
+</rules>

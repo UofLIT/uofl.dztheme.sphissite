@@ -1,0 +1,142 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="uofl.p4basetheme">
+
+    <!-- 'UofL Base Theme' Zope 3 browser layer
+    Register views, viewlets and resources for this layer to make sure
+    they only apply to the 'UofL Base Theme' theme.
+    You can also use this layer to override default Plone browser views
+    and viewlets only within the 'UofL Base Theme' theme.
+  -->
+    <include package="plone.app.portlets" />
+    
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="UofL Base Theme" />
+
+    <browser:viewletManager
+        name="uofl.portal.top"
+        provides=".interfaces.IUofLHeader"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager" />
+    
+    <browser:viewletManager
+        name="uofl.portal.footer"
+        provides=".interfaces.IUofLFooter"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager" />
+
+    <browser:viewletManager
+        name="uofl.portal.personaltools"
+        provides=".interfaces.IUofLPersonalTools"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager" />
+
+    <browser:viewletManager
+        name="uofl.footer.personaltools"
+        provides=".interfaces.IUofLFooterPersonalTools"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager" />
+
+    <browser:viewletManager
+        name="uofl.header.logo"
+        provides=".interfaces.IUofLHeaderLogo"
+        permission="zope2.View"
+        class="plone.app.viewletmanager.manager.OrderedViewletManager" />
+
+    <!-- Viewlets registration -->
+
+    <browser:viewlet
+        name="uofl.header"
+        manager=".interfaces.IUofLHeader"
+        class=".viewlets.UofLHeaderViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"/>
+
+    <browser:viewlet
+        name="uofl.footer"
+        manager=".interfaces.IUofLFooter"
+        class=".viewlets.UofLFooterViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"/>
+
+    <browser:viewlet
+        name="plone.global_sections"
+        manager=".interfaces.IUofLHeader"
+        class="quintagroup.dropdownmenu.browser.viewlets.GlobalSectionsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"/>
+
+    <browser:viewlet
+        name="uofl.personal_bar"
+        manager=".interfaces.IUofLPersonalTools"
+        class=".viewlets.UofLPersonalBarViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"/>
+
+    <browser:viewlet
+        name="uofl.footer.personal_bar"
+        manager=".interfaces.IUofLFooterPersonalTools"
+        class=".viewlets.UofLFooterPersonalBarViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"/>
+
+    <browser:viewlet
+        name="plone.analytics"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class="plone.app.layout.analytics.view.AnalyticsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"/>
+
+    <browser:viewlet
+        name="uofl.logo"
+        manager=".interfaces.IUofLHeaderLogo"
+        template="logo.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View" />
+    
+    <!-- Zope 3 browser resources -->
+
+    <!-- Resource directory for images
+    See uofl/p4basetheme/browser/images/README.txt
+    for more information about registering images as Zope 3 browser
+    resources.
+  -->
+    <browser:resourceDirectory
+        name="uofl.p4basetheme.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+      />
+
+    <browser:resourceDirectory
+        name="uofl.p4basetheme.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+      />
+
+    <browser:resourceDirectory
+        name="uofl.p4basetheme.javascripts"
+        directory="javascripts"
+        layer=".interfaces.IThemeSpecific"
+      />
+
+    <browser:resourceDirectory
+        name="uofl.p4basetheme.dzrules"
+        directory="dzrules"
+        layer=".interfaces.IThemeSpecific"
+      />
+
+    <browser:page
+    for="*"
+    name="tinymce-jsonconfiguration"
+    class=".tinymce.TinyMCEBrowserView"
+    permission="zope2.View"
+    attribute="jsonConfiguration"
+    layer=".interfaces.IThemeSpecific"
+     />
+  
+  
+
+</configure>

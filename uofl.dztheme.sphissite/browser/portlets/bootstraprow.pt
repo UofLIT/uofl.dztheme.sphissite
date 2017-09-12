@@ -1,0 +1,5 @@
+<h3 tal:attributes="class string:bsrow_portlet_title"
+         tal:content="string:${view/portlet_title}" />
+<div class="row" tal:attributes="class string:row ${view/css_class}">
+    <div tal:replace="structure view/data/text" />
+</div>

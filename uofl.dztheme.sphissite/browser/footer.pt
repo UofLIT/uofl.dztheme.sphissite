@@ -1,0 +1,251 @@
+<footer tal:attributes="class view/uofl_footer">
+    <div class="container">
+        <div class="row hidden-phone">
+            <div class="span3">
+                <ul class="nav nav-pills">
+                    <li id="copy">
+                        <a title="Go to louisville.edu" rel="tooltip" href="http://louisville.edu/">
+                            &copy; University of Louisville
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="span7">
+                <ul class="nav nav-pills">
+                    <li>
+                        <a href="http://louisville.edu/contact.html">Contact</a>
+                    </li>
+                    <li class="dropdown dropup">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            Apply
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://louisville.edu/admissions/apply">Undergraduate</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://louisville.edu/admissions/apply/transfer/">Transfer</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://graduate.louisville.edu/">Graduate</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://louisville.edu/dental/dmd/admission/">Dentistry</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://www.law.louisville.edu/admissions">Law</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://louisville.edu/medschool/apply">Medicine</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://louisville.edu/business/apply">MBA</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://louisville.edu/admissions/apply/international">International</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://louisville.edu/online/admissions">Online Learning</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="http://louisville.edu/jobs">Jobs</a>
+                    </li>
+                    <li>
+                        <a href="http://louisville.edu/giving">Donate</a>
+                    </li>
+                    <li>
+                        <a href="http://louisville.edu/emergency">Emergency</a>
+                    </li>
+                </ul>
+                <!-- Fix this -->
+            </div>
+            <div class="span2">
+                <ul class="nav nav-pills pull-right">
+                    <li id="login-bottom" class="dropdown dropup pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            Login<i tal:attributes="class python:'icon-cog' + ('' if view.uofl_footer == 'white' else ' icon-white')"></i>
+                        </a>
+                        <ul class="dropdown-menu bottom-up">
+                            <li>
+                                <a href="https://exchange.louisville.edu/">Exchange</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://outlook.com/cardmail.louisville.edu">CardMail</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://hrprod.louisville.edu/">PeopleSoft HR</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://csprod.louisville.edu/">PeopleSoft Campus Solutions</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://financials.louisville.edu/">PeopleSoft Financials</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://blackboard.louisville.edu/">Blackboard</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="login">Plone</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li tal:condition="python: view.uofl_header == 'account-none'"
+                        tal:replace="structure provider:uofl.footer.personaltools" />
+                </ul>
+            </div>
+        </div>
+        <div class="row visible-phone">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a href="http://louisville.edu/contact.html">
+                            <i tal:attributes="class python:'icon-chevron-right' + ('' if view.uofl_footer == 'white' else ' icon-white') + ' pull-right'"></i>
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button class="btn btn-navbar" data-target="#mobile-footer-about" data-toggle="collapse" type="button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="footer-item">Apply</span>
+                        <div id="mobile-footer-about" class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li>
+                                    <a href="http://louisville.edu/admissions/apply">Undergraduate</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://louisville.edu/admissions/apply/transfer/">Transfer</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://graduate.louisville.edu/">Graduate</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://louisville.edu/dental/dmd/admission/">Dentistry</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://www.law.louisville.edu/admissions">Law</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://louisville.edu/medschool/apply">Medicine</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://louisville.edu/business/apply">MBA</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://louisville.edu/admissions/apply/international">International</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://louisville.edu/online/admissions">Online Learning</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a href="http://louisville.edu/jobs">
+                            <i tal:attributes="class python:'icon-chevron-right' + ('' if view.uofl_footer == 'white' else ' icon-white') + ' pull-right'"></i>
+                            Jobs
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a href="http://louisville.edu/giving">
+                            <i tal:attributes="class python:'icon-chevron-right' + ('' if view.uofl_footer == 'white' else ' icon-white') + ' pull-right'"></i>
+                            Donate
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a href="http://louisville.edu/emergency">
+                            <i tal:attributes="class python:'icon-chevron-right' + ('' if view.uofl_footer == 'white' else ' icon-white') + ' pull-right'"></i>
+                            Emergency
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <button class="btn btn-navbar" data-target="#mobile-footer-login" data-toggle="collapse" type="button">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="footer-item">Login</span>
+                    <div id="mobile-footer-login" class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li>
+                                <a href="https://exchange.louisville.edu/">Exchange</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://outlook.com/cardmail.louisville.edu">CardMail</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://hrprod.louisville.edu/">PeopleSoft HR</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://csprod.louisville.edu/">PeopleSoft Campus Solutions</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="https://financials.louisville.edu/">PeopleSoft Financials</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="http://blackboard.louisville.edu/">Blackboard</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="login">Plone</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a title="Go to louisville.edu" rel="tooltip" href="http://louisville.edu/">
+                &copy; University of Louisville
+            </a>
+        </div>
+    </div>
+</footer>

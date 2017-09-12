@@ -1,0 +1,55 @@
+﻿/* portlet news item details */
+
+div.news-item {
+    padding: 0px 14px;
+    vertical-align: central;
+    display: inline-block;
+}
+
+    div.news-item img {
+        margin-right: 10px;
+    }
+
+p.headline {
+    margin-bottom: 2px;
+}
+
+    p.headline a {
+        font-family: Georgia;
+        color: #449ca9;
+    }
+
+p.date-byline {
+    text-transform: uppercase;
+    color: #A0A0A0;
+}
+
+/* portlet accordion*/
+
+#portlet-accordion i {
+    width: 16px;
+}
+
+#portlet-accordion a.accordion-toggle {
+    text-transform: uppercase;
+    color: #00788a;
+    font-size: 86%;
+    font-weight: bold;
+}
+
+#portlet-accordion.light div.accordion-heading {
+    background-color: #fff;
+}
+
+#portlet-accordion.light div.accordion-inner {
+    background-color: #fff;
+}
+
+#portlet-accordion.dark div.accordion-heading {
+    background-color: #cccccc;
+}
+
+#portlet-accordion.dark div.accordion-inner {
+    background-color: #eaeaea;
+}
+

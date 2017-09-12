@@ -1,0 +1,423 @@
+/*Global Stuff */
+
+.container-fluid, .row-fluid {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 100%;
+font-family: "proxima-nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #AD0000;
+}
+
+#plone-content {
+    margin-bottom: 30px;
+}
+
+body.template-fg_base_view_p3 #content li.formTab a.required span::after, 
+body.template-fg_base_view_p3 #content-core li.formTab a.required span::after, 
+body.template-fg_base_view_p3 div.field span.required::after {
+    color: Red;
+    content: "■";
+    padding-left: 0.2em;
+}
+
+body.template-fg_base_view_p3 div.ArchetypesMultiSelectionWidget label.formQuestion,
+body.template-fg_base_view_p3 div.ArchetypesSelectionWidget label.formQuestion,
+body.template-fg_base_view_p3 div.ArchetypesSelectionWidget div.formQuestion {
+    display: table !important;     
+}
+
+body.forceColors {
+    overflow: initial !important;
+}
+
+#kss-spinner {
+    display: none;
+}
+
+.hiddenStructure {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    display: block;
+    height: 0.1em;
+    margin: -0.1em 0 0 -0.1em;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+}
+
+.search input[type=text], .search input[type=search] {
+	font-style: italic;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: url("++resource++uofl.p4basetheme.images/glyphicons-halflings.png") !important;
+}
+
+.icon-white {
+    background-image: url("++resource++uofl.p4basetheme.images/glyphicons-halflings-white.png") !important;
+}
+
+.icon-rss {
+    background-image: url("++resource++uofl.p4basetheme.images/icon-rss.png") !important;
+    background-position: 0 0;
+}
+
+.bsrow_portlet_title {
+    display: none;
+}
+
+#portletmanager-uofl-heromanager {
+    text-align: center;
+}
+
+#portletmanager-uofl-prefootermanager {
+    text-align: center;
+}
+
+#visual-portal-wrapper {
+    margin-top: 20px;
+}
+
+input#title {
+    min-height: 22px;
+}
+
+ul.globalSectionsLevel2, ul.globalSectionsLevel3, ul.globalSectionsLevel4 {
+    margin: 0px;
+}
+
+div.field label, body.template-calendar-controlpanel label, div.configlet label, ul.configlets label, body.template-hnfpicker-settings label.horizontal {
+    display: inline;
+    margin-left: 8px;
+}
+
+#login-form label, body.template-hnfpicker-settings label {
+    display: block;
+    margin-left: 0px;
+}
+
+div.widget div.label, body.template-calendar-controlpanel div.label {
+    color: #000000;
+    padding: 0px;
+}
+
+.portlets-manager select {
+    width: 150px;
+}
+
+div.portletAssignments div.portletHeader {
+    padding: 10px 3px;
+}
+
+div.displayModeActions {
+    margin: 5px 0px;
+}
+
+    div.displayModeActions a {
+        margin-left: 5px;
+    }
+
+#users_search table.listing > tbody > tr:nth-child(2) > th:nth-child(3), #users_search table.listing > tbody > tr:nth-child(2) > th:nth-child(4) {
+    display: none;
+}
+
+#users_search table.listing > tbody > tr:nth-child(3) > th:nth-child(7) {
+    display: none;
+}
+
+#users_search table.listing > tbody > tr:nth-child(4) > td:nth-child(9),#users_search table.listing > tbody > tr:nth-child(4) > td:nth-child(8),#users_search table.listing > tbody > tr:nth-child(4) > td:nth-child(10) {
+    display: none;
+}
+
+.image-left {
+    float: left;
+    margin: 0.5em 2em 0.5em 0;
+}
+
+.image-right {
+    float: right;
+    margin: 0.5em 0 0.5em 2em;
+}
+
+.image-inline {
+    float: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+table.invisible {
+    visibility: visible !important;
+}
+
+#core-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+table.listing, table.plain {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.invisible td, table.invisible th, table.plain td, table.plain th, table.listing td, table.listing th {
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+table.plain th, table.plain td {
+    border: 1px solid #DDDDDD;
+}
+table.listing td.listingCheckbox, table.listing th.listingCheckbox {
+    text-align: center;
+}
+table.listing {
+    border-bottom: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+}
+table.listing .top {
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+}
+table.listing th {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #DDDDDD;
+    border-color: #E7E7E7;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 0.1em;
+    color: #666666;
+    text-align: left;
+}
+table.listing tr.odd th {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #FFFFFF;
+    border-image: none;
+    border-style: solid solid none none;
+    border-width: 0.1em;
+}
+table.listing tbody th {
+    font-weight: bold;
+}
+table.listing tbody tr {
+    text-align: left;
+}
+table.listing tbody tr.odd {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+table.listing tbody tr td {
+    background: none repeat scroll 0 0 transparent;
+}
+table.listing tbody tr.odd td {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+table.listing td {
+    border-right: 1px solid #DDDDDD;
+}
+table.listing a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom: medium none !important;
+    border-image: none;
+    border-left: medium none;
+    border-right: medium none;
+    border-top: medium none;
+    display: inline-block;
+}
+table.listing td.draggable {
+    background: none repeat scroll 0 0 #DDDDDD !important;
+    border-bottom: 1px solid white;
+    padding: 0.4em 0.4em 0 0.5em;
+    text-shadow: 1px 1px 1px White;
+}
+table.vertical {
+}
+table.vertical th {
+    text-align: right;
+}
+table.vertical td {
+    border-top: 0.1em solid #E7E7E7;
+    padding: 0.5em;
+}
+table.grid td, table.grid th {
+    border: 1px solid #E7E7E7;
+    padding: 0.5em;
+}
+pre {
+    background-color: #222;
+    color: White;
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 90%;
+    margin-bottom: 1em;
+    line-height: 1.25em;
+}
+.discreet {
+    color: #666;
+    font-size: 85%;
+    font-weight: normal;
+    display:block !important;
+}
+
+.visualHighlight {
+    background-color: #ffb;
+}
+
+.pullquote {
+    margin: 0 1em 0.5em 0.5em;
+    font-weight: bold;
+    line-height: 1.25em;
+    float: right;
+    width: 35%;
+    clear: right;
+    color: #444;
+    font-size: 1.6em;
+    letter-spacing: -0.08em !important;
+}
+.callout {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+}
+
+div.field.error {
+background-color: #fdc;
+border: 1px solid red;
+padding: 0.5em;
+margin: 1em 0;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: url("++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_45_205c90_40x100.png") repeat-x scroll 50% 50% #205c90 !important;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("++resource++jquery-ui-themes/sunburst/images/ui-icons_ffffff_256x240.png") !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: url("++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_50_75ad0a_40x100.png") repeat-x scroll 50% 50% #75ad0a !important;
+}
+
+.ui-widget-header {
+    background: url("++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_75_dddddd_40x100.png") repeat-x scroll 50% 50% #dddddd !important;
+}
+
+.ui-widget-content {
+    background: url("++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_100_ffffff_40x100.png") repeat-x scroll 50% 50% #ffffff !important;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background: url("++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_55_ffdd77_40x100.png") repeat-x scroll 50% 50% #ffdd77 !important;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    background: url("++resource++jquery-ui-themes/sunburst/images/ui-bg_flat_75_dddddd_40x100.png") repeat-x scroll 50% 50% #dddddd !important;
+}
+
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
+    background-image: url("++resource++jquery-ui-themes/sunburst/images/ui-icons_444444_256x240.png") !important;
+}
+
+.fc-event-inner {
+    background-color: #36c;
+    border-color: #36c;
+    color: #fff;
+}
+
+.fc-icon-wrap {
+    float: left;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding: 0.3em 0.6em 0 0.6em;
+    position: relative;
+    white-space: nowrap;
+}
+
+.fc-button-today, .fc-button-month, .fc-button-agendaWeek, .fc-button-agendaDay {
+    height: 1.5em;
+    line-height: 1.5em;
+    padding: 0 0.6em;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+body.template-fg_base_view_p3 div[id*=archetypes-fieldname] {
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+body.template-fg_base_view_p3 label.formQuestion {
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #999999;
+    border-radius: 3px;
+}
+
+body.template-fg_base_view_p3 .label {
+    margin-left: 8px;
+    margin-bottom: 5px;
+}
+
+body.template-fg_base_view_p3 textarea[name~=rich-text] {
+    margin-bottom: 20px;
+}
+
+body.template-fg_base_view_p3 .fieldTextFormat label {
+    padding-right: 5px;
+}
+
+body.template-fg_base_view_p3 div.ArchetypesCalendarWidget {
+    width: 310px;
+}
+
+body.template-fg_base_view_p3 select#edit_form_date_0_month,
+body.template-fg_base_view_p3 select#edit_form_date_0_minute {
+    width: 125px;
+}
+
+body.template-fg_base_view_p3 select[id*=edit_form_date] {
+    width: 75px;
+}
+
+body.template-fg_base_view_p3 div[id*=archetypes-fieldname] input {
+    width: initial;
+}
+
+body.template-atct_edit #hero-rows,
+body.template-edit #hero-rows {
+    display: none;
+}
