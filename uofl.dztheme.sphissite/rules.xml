@@ -115,8 +115,11 @@
   <notheme css:if-not-content="#visual-portal-wrapper" />
   <notheme css:if-content="body.template-manage-portlets" />
   <notheme if-content="//body[contains(@class, 'BootstrapRowPortlet')]" />
+  notheme if-content="//body[contains(@class, 'ContentRule')]" />
+  <notheme if-content="//body[contains(@class, 'Static')]" />
   <notheme if-content="//body[contains(@class, 'template-plone.portlet')]" />
   <notheme if-content="//body[contains(@class, 'template-portlets')]" />
+	<notheme if-content="//body[contains(@class, 'portlet.feedmixer')]" />
   <notheme css:if-content="body.template-overview-controlpanel" />
   <notheme css:if-content="body.template-atct_edit" />
   <notheme css:if-content="body.template-base_edit" />
@@ -150,7 +153,10 @@
   <notheme css:if-content="body.template-ldap-controlpanel" />
   <notheme css:if-content="body.template-typekit-settings" />
   <notheme css:if-content="body.template-hnfpicker-settings" />
+	<notheme css:if-content="body.template-useractions" />
+	<notheme css:if-content="body.template-manage-elements" />
   <notheme if-path="folder_rename_form" />
+	<notheme if-path="folder_constraintypes_form" />
   <notheme css:if-content="#edit-bar"  if="$preview_mode != 'True'" />
   <notheme if="$ajax_load" />
 
@@ -350,6 +356,12 @@
   <rules if-not-path="/">
     <!-- inner pages -->
     <rules if-path="/departments">
+
+      <rules if-path="/departments/yvprc">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/banner-images/yvprc-banner.jpg" />
+        </replace>
+      </rules>
 
       <rules if-path="/departments/bioinformatics-biostatistics">
         <replace css:theme="#bg-secondary img" >
@@ -594,7 +606,8 @@
     <replace theme-children="//div[contains(@id, 'header-flag-text')]" content-children="//div[contains(@id,'portal-column-one')]/div/dl/dd/ul/li[1]/div" css:if-content="#portal-column-one .portletNavigationTree" />
     <replace theme-children="//div[contains(@id, 'header-flag-text')]/a" css:content-children="#parent-fieldname-title" css:if-not-content="#portal-column-one .portletNavigationTree" />
     
-    <replace theme-children="//div[contains(@id,'flag')]/div/dl">
+    <drop     css:if-not-content="#portal-column-one .portletNavigationTree" css:theme=         "#flag"/>
+    <replace  css:if-content=    "#portal-column-one .portletNavigationTree" css:theme-children="#flag dl">
       <xsl:for-each select="//div[contains(@id,'portal-column-one')]/div/dl/dd/ul/li[position()>1]">
         <xsl:element name="dt">
           <xsl:choose>

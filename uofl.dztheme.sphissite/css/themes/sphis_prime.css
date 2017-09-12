@@ -700,6 +700,17 @@ dl.main-secondary .flag-top
     line-height: 24px;
 }
 
+@media (min-width: 768px) {
+	body.department-primary #content {
+		margin-top: 150px;
+	}
+}
+@media (min-width: 768px) {
+	body.department-secondary #content {
+		/* margin-top: 50px; */
+	}
+}
+
 .bottom-row {
     background-color: #FFF;
     width: 100% !important;
@@ -929,6 +940,25 @@ dl.main-secondary .flag-top
 {
     padding-left: 15px;
     padding-bottom: 5px;
+}
+
+/* news collection */
+.tileItem img {
+  float: right;
+}
+.visualIEFloatFix {
+  clear: right;
+}
+
+/* news page */
+#parent-fieldname-image {
+    float: right;
+}
+span[id^="parent-fieldname-imageCaption"] {
+    clear: right;
+    float: right;
+    padding: 0 10px;
+    width: 142px;
 }
 
 #lower-links a, #lower-links a:visited,
