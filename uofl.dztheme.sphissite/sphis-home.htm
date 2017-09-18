@@ -13,14 +13,8 @@
 	<![endif]-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
-	<!--link rel="stylesheet" type="text/css" href="css/themes/sphis_prime.css" id="themecss" /-->
-	<!--[if lt IE 9]>
-	<style type="text/css" media="all">
-	html body #sphis_banners .pager .activeSlide:before {
-		left: -23px !important;
-	}
-	</style>
-	<![endif]-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- script src="https://use.fontawesome.com/b2840eeeaa.js"></script -->
 	<style>
 body {
 	background-color: #f2f2f2;
@@ -33,20 +27,18 @@ header {
 	background-repeat: repeat-x;
 }
 /* put on red and make sure fits for small phones */
-nav .navbar-toggler-wrapper {
+nav .navbar-toggler {
 	margin-top: 44.5px;
 	margin-left: -25px;
+	border-color: rgb(255,255,255) !important;
 }
-nav .navbar-toggler {
-	color: rgba(255,255,255,1) !important;
-	border-color: rgba(255,255,255,.5) !important;
-	background-color: rgba(255,255,255,.1);
+nav .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 .navbar { padding: 0; }
 .navbar-brand {
 	padding: 0;
 }
-
 /* fixes for IE 10 */
 /* for text not wrapping */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -136,11 +128,10 @@ _:-ms-fullscreen, :root nav .input-group .form-control {
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand mr-0" href="http://louisville.edu/sphis"><img src="img/logo-desktop.png" /></a>
-				<div class="navbar-dark align-self-start navbar-toggler-wrapper d-lg-none">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+
+					<button class="navbar-toggler align-self-start" type="button" data-toggle="collapse" data-target="#navbarCollapse">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-				</div>
 				<div class="collapse navbar-collapse flex-md-column align-self-stretch p-2 p-lg-0 ml-md-auto" id="navbarCollapse">
 					<div class="align-self-end d-flex flex-column flex-lg-row">
 						<ul id="nav1" class="align-items-lg-center navbar-nav mr-lg-2 mb-lg-1 ml-lg-2 small">
@@ -196,7 +187,7 @@ _:-ms-fullscreen, :root nav .input-group .form-control {
 	</header>
 	<style>
 #banners {
-	background-color: #7a6c52;
+	background-color: hsl(200, 25%, 45%);
 	border: 5px solid white;
 }
 #banners .slick-list {
@@ -419,9 +410,23 @@ _:-ms-fullscreen, :root nav .input-group .form-control {
 	font-size: 125%;
 	text-transform: uppercase;
 }
+
+a.more {
+	border-top: 2.5px solid #ad0000;
+}
+
+#lower a {
+	color: hsl(200, 25%, 45%);
+}
+
+#lower a.btn {
+	background-color: hsl(200,25%,45%);
+	border-color: hsl(200,25%,45%);
+	color: white;
+}
 			</style>
 
-		<div id="lower" class="row row-eq-height">
+		<div id="lower" class="row row-eq-height small">
 			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
 				<h3>News</h3>
 				<table class="table table-striped table-sm">
@@ -448,9 +453,7 @@ _:-ms-fullscreen, :root nav .input-group .form-control {
 						</td></tr>
 					</tbody>
 				</table>
-				<div class="mt-auto" style="border-top: 2.5px solid #ad0000;">
-					<a href="#">More News</a>
-				</div>
+				<a href="#" class="more d-block mt-auto">More News</a>
 			</div>
 			<div class="events col-lg-3 col-md-6 d-flex flex-column mt-4">
 				<h3>Upcoming Events</h3>
@@ -518,17 +521,6 @@ _:-ms-fullscreen, :root nav .input-group .form-control {
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
-				<h3>About SPHIS</h3>
-				<p>
-				<img class="float-left" alt="SPHIS" src="//louisville.edu/sphis/ceph.png">
-				Public health is about more than restaurant inspections, flu shots and managing health departments. It is identifying emerging health threats and risks, monitoring health factors and status, understanding how people seek and respond to health information and preparing responses to events that can affect the public's health.
-				</p>
-				
-				<div class="mt-auto" style="border-top: 2.5px solid #ad0000;">
-					<a href="#">Learn More About SPHIS</a>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
 				<h3>Popular Links</h3>
 				<table class="table table-striped table-sm"><tbody>
 					<tr><td><a href="#">MPH Program</a></td></tr>
@@ -542,16 +534,42 @@ _:-ms-fullscreen, :root nav .input-group .form-control {
 					&nbsp;
 				</div>
 			</div>
+			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
+				<h3>About SPHIS</h3>
+				<p class="text-center">
+					<img class="img-fluid" alt="SPHIS" src="//louisville.edu/sphis/ceph.png">
+					
+				</p>
+				<p class="text-center">
+					<a href="#" class="btn btn-info">Support SPHIS</a>
+				</p>
+				
+				<div class="mt-auto" style="border-top: 2.5px solid #ad0000;">
+					<a href="#">Learn More About SPHIS</a>
+				</div>
+			</div>
 		</div>
+		<style>
+		#social-media a {
+			color: hsl(200,25%,45%);;
+		}
+		</style>
 		
-		<div id="social-media" class="row mt-1">
-			<div class="col text-right">
-				Stay connected
-				<a href="#"><img src="img/twitter.png" /></a>
-				<a href="#"><img src="img/sphis/sm_cr.png" /></a>
-				<a href="#"><img src="img/sphis/sm_fb.png" /></a>
-				<a href="#"><img src="img/sphis/sm_in.png" /></a>
-				<a href="#"><img src="img/sphis/sm_yt.png" /></a>
+		<div id="social-media" class="row justify-content-end mt-2">
+			<div class="col-auto">
+				stay connected
+			</div>
+			<div class="col-auto">
+				<a href="#"><i class="fa fa-twitter"><span class="sr-only">twitter</span></i></a>
+			</div>
+			<div class="col-auto">
+				<a href="#"><i class="fa fa-facebook"><span class="sr-only">Facebook</span></i></a>
+			</div>
+			<div class="col-auto">
+				<a href="#"><i class="fa fa-linkedin"><span class="sr-only">LinkedIn</span></i></a>
+			</div>
+			<div class="col-auto">
+				<a href="#"><i class="fa fa-youtube-play"><span class="sr-only">YouTube</span></i></a>
 			</div>
 		</div>
 	</div>
