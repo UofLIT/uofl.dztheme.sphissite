@@ -1,638 +1,476 @@
 <!DOCTYPE html>
 <html>
-	<head lang="en">
-	<meta charset="utf-8">
-	<title>SPHIS Home</title>
-	<meta name="description" content="">
-	<meta name="author" content="Derek Davenport">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-	</script>
-	<![endif]-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<!-- script src="https://use.fontawesome.com/b2840eeeaa.js"></script -->
-	<style>
-body {
-	background-color: #f2f2f2;
-}
-a {
-	color: #ad0000;
-}
-header {
-	background-image: url(img/sphis/bkground.png);
-	background-repeat: repeat-x;
-}
-/* put on red and make sure fits for small phones */
-nav .navbar-toggler {
-	margin-top: 44.5px;
-	margin-left: -25px;
-	border-color: rgb(255,255,255) !important;
-}
-nav .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-}
-.navbar { padding: 0; }
-.navbar-brand {
-	padding: 0;
-}
-/* fixes for IE 10 */
-/* for text not wrapping */
-@media (min-width: 992px) and (max-width: 1199px) {
-	_:-ms-input-placeholder, :root #nav1 .nav-item {
-		max-width: 105px;
-	}
-	/* undo for IE 11 */
-	_:-ms-fullscreen, :root #nav1 .nav-item {
-		max-width: none;
-	}
-}
-
-
-/* fixes for IE 11 */
-_:-ms-fullscreen, :root #navbarCollapse {
-	width: 100%;
-}
-_:-ms-fullscreen, :root #navbarCollapse > div.d-flex {
-	max-width: 100%;
-}
-_:-ms-fullscreen, :root nav .input-group .form-control {
-	flex-basis: auto;
-}
-
-/* fix for IE 10-11 */
-@media screen and (min-width:0\0) and (min-width: 992px) {
-	nav .navbar-collapse {
-		-ms-flex-preferred-size: auto;
-		flex-basis: auto;
-	}
-}
-
-/* all browsers */
-/* make 100% at md and below rather than only xs */
-@media (max-width: 991px) {
-	nav .form-inline .input-group {
-		width: 100%;
-	}
-}
-
-@media (min-width: 992px) {
-	div.collapse > * {
-		height: 43px;
-	}
-
-	#nav1 {
-		background-color: #f2f2f2;
-		border: 1px solid black;
-		border-top-width: 0;
-	}
-
-	#nav1 .nav-item {
-		width: -min-content;
-	}
-
-	#nav1 .nav-link {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-
-	#nav2 {
-		font-size: 10.4px;
-	}
-
-	div.collapse > ul.navbar-nav .nav-link {
-		color: white;
-	}
-}
-
-@media (max-width: 991px) {
-	#navbarCollapse {
-		background-color: #f2f2f2;
-		border: 1px solid white;
-		border-top-width: 0;
-	}
-}
-/* make fit on small screens */
-@media (max-width: 767px) {
-.dropdown-item {
-	white-space: normal;
-}
-}
-	</style>
-</head>
-<body>
-	<header>
-		<div class="container">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand mr-0" href="http://louisville.edu/sphis"><img src="img/logo-desktop.png" /></a>
-
-					<button class="navbar-toggler align-self-start" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				<div class="collapse navbar-collapse flex-md-column align-self-stretch p-2 p-lg-0 ml-md-auto" id="navbarCollapse">
-					<div class="align-self-end d-flex flex-column flex-lg-row">
-						<ul id="nav1" class="align-items-lg-center navbar-nav mr-lg-2 mb-lg-1 ml-lg-2 small">
-							<li class="nav-item"><a class="nav-link text-lg-center text-uppercase" href="#">Future Students</a></li>
-							<li class="nav-item"><a class="nav-link text-lg-center text-uppercase" href="#">Current Students</a></li>
-							<li class="nav-item"><a class="nav-link text-lg-center text-uppercase" href="#">Faculty &amp; Staff</a></li>
-							<li class="nav-item"><a class="nav-link text-lg-center text-uppercase" href="#">Alumni &amp; Donors</a> </li>
-						</ul>
-						<form class="form-inline">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Search">
-								<span class="input-group-btn">
-									<button class="btn btn-secondary" type="button">Go<!--&#x1F50D;--></button>
-								</span>
-							</div>
-						</form>
-					</div>
-					<ul id="nav2" class="align-self-end align-items-lg-center navbar-nav small">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown" href="#" id="navbarDropdownCenters" aria-haspopup="true" aria-expanded="false">
-								Institutes &amp; Centers
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownCenters">
-								<a class="dropdown-item" href="/sphis/departments/center-for-health-hazards-preparedness-chhp"> Center for Health Hazards Preparedness </a>
-								<a class="dropdown-item" href="/sphis/departments/statistical-consulting-center"> Statistical Consulting Center </a>
-								<a class="dropdown-item" href="/sphis/departments/the-commonwealth-institute-of-kentucky"> Commonwealth Institute of Kentucky </a>
-								<a class="dropdown-item" href="/sphis/departments/yvprc">Youth Violence Prevention Research Center </a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown" href="#" id="navbarDropdownDepartments" aria-haspopup="true" aria-expanded="false">
-								Departments
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownDepartments">
-								<a class="dropdown-item" href="/sphis/departments/bioinformatics-biostatistics"> Department of Bioinformatics &amp; Biostatistics </a>
-								<a class="dropdown-item" href="/sphis/departments/environmental-occupational-health-sciences"> Department of Environmental &amp; Occupational Health Sciences </a>
-								<a class="dropdown-item" href="/sphis/departments/epidemiology-population-health"> Department of Epidemiology &amp; Population Health </a>
-								<a class="dropdown-item" href="/sphis/departments/health-management-systems-sciences"> Department of Health Management &amp; Systems Sciences </a>
-								<a class="dropdown-item" href="/sphis/departments/health-promotion-behavioral-sciences"> Department of Health Promotion &amp; Behavioral Sciences </a>
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/about">About</a></li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/academics">Academics</a></li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/research">Research</a></li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/partnerships">Partnerships</a></li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/news">News</a></li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/directory">Directory</a></li>
-						<li class="nav-item"><a class="nav-link text-uppercase" href="/sphis/contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<style>
-#banners {
-	background-color: hsl(200, 25%, 45%);
-	border: 5px solid white;
-}
-#banners .slick-list {
-	overflow: hidden !important; /* not sure why visible, but makes screen super wide */
-}
-.banner {
-	display: none;
-}
-.banner-image div {
-	background-size: cover;
-	padding-top: 66.66%;
-}
-
-#banners .slick-list {
-	overflow: visible;
-}
-
-#banners h1,
-#banners h2,
-#banners a {
-	color: white !important;
-}
-
-#banners a {
-	font-style: oblique;
-}
-
-.flex-grow {
-	flex: 1;
-	-ms-flex: 1 1 100%;
-}
-/* IE 10-11 fixes */
-.flex-grow > * {
-	max-width: 100%;
-}
-.flex-column .flex-grow,
-.flex-column.flex-grow {
-	-ms-flex-preferred-size: auto;
-}
-@media (min-width: 769px) {
-	.flex-md-row .flex-grow {
-		-ms-flex-preferred-size: 100%;
-	}
-}
-
-	</style>
-	<div id="home-content" class="container">
-		<div id="banners">
-			<div class="banner">
-				<div class="d-flex flex-column flex-md-row">
-					<div class="banner-image flex-grow">
-						<div  style="background-image: url(img/sphis/graystreet.png)">
-						</div>
-					</div>
-					<!-- this shouldn't grow when column -->
-					<div class="flex-grow d-flex flex-column justify-content-center p-2 pl-md-4">
-						<h1 class="display-5">Alumni Forging National Careers</h1>
-						<h2><small>Natasha DeJarnet, APHA policy analyst</small></h2>
-						<a href="#">Learn More</a>
-					</div>
-				</div>
-			</div>
-			<div class="banner">
-				<div class="d-flex flex-column flex-md-row">
-					<div class="banner-image flex-grow">
-						<div style="background-image: url(img/sphis/academics.png)"></div>
-					</div>
-					<div class="flex-grow d-flex flex-column justify-content-center p-2 pl-md-4">
-						<h1 class="display-5">Smart People</h1>
-						<h2><small>being smart</small></h2>
-						<a href="#">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-		<!--div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100" src="img/sphis/graystreet.png" alt="Gray Street">
-					<div class="carousel-caption d-none d-md-block">
-						<h3>Gray Street</h3>
-						<p>check it out</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="img/sphis/graystreet.png" alt="Gray Street">
-					<div class="carousel-caption d-none d-md-block">
-						<h3>Gray Street</h3>
-						<p>check it out again</p>
-					</div>
-				</div>
-			</div>
-		</div-->
-
-<style>
-#cta a {
-	color: white;
-	text-transform: uppercase;
-}
-#cta div:first-child {
-	background-color: #ad0000;
-	color: white;
-	padding: 7.5px 15px;
-}
-
-.cta-action {
-    background: #333;
-    position: relative;
-    transition: background 0.4s, box-shadow 0.4s;
-	padding-left: 32px;
-}
-
-.cta-action:hover {
-    background: #4a4a4a;
-}
-
-@media (min-width: 768px) {
-#cta:hover .cta-action::before,
-#cta:hover .cta-action::after {
-    background: #666;
-}
-
-.cta-action::before,
-.cta-action::after {
-    background: #333;
-    box-shadow: -8px 0 0 #fff;
-    content: ' ';
-    display: block;
-    height: 50.4%;
-    position: absolute;
-    left: -16px;
-    top: 0;
-    transform: skew(30deg);
-    transition: background 0.4s;
-    width: 32px;
-    z-index: 3;
-}
-
-.cta-action::before {
-    top: auto;
-		bottom: 0;
-    transform: skew(-30deg);
-}
-}
-
-</style>
-		<div id="cta" class="d-flex flex-column flex-md-row mt-4">
-			<div class="cta-call d-flex flex-grow flex-column justify-content-center align-items-center text-center p-2 pr-4">
-				<h4>School of Public Health &amp; Information Sciences</h4>
-				<h5>University of Louisville</h5>
-			</div>
-			<a href="#" class="cta-action d-flex justify-content-center align-items-center text-center pr-4 py-2">
-				<h2>Apply Now!</h2>
-			</a>
-		</div>
-<style>
-
-#focals .col-md .flex-column {
-	border: 0 solid #ad0000;
-	border-width: 5px 0 5px 0;
-	background-color: white;
-}
-
-#focals .col-md .flex-column div div:first-child {
-	border-bottom: 2.5px solid #f2f2f2;
-	background-size: cover;
-	padding-top: 56.25%;
-}
-
-#focals .col-md .flex-column div:first-child::before {
-	content: "";
-}
-
-
-</style>
-		<div id="focals" class="row">
-			<div class="col-md mt-4">
-				<div class="d-flex flex-column">
-					<div>
-					<div style="background-image: url(img/sphis/graystreet.png)"></div>
-					</div>
-					<div class="p-2">
-						<h1>Viral</h1>
-						<p>Lorem ipsum dolor sit amet.</p>
-						<p><a href="#">Apply Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md mt-4">
-				<div class="d-flex flex-column">
-					<div>
-					<div style="background-image: url(img/sphis/academics.png)"></div>
-					</div>
-					<div class="p-2">
-						<h1>Viral</h1>
-						<p>Lorem ipsum dolor sit amet.</p>
-						<p><a href="#">Apply Now</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<style>
-
-#lower .table-striped tbody tr:nth-of-type(odd) {
-	background-color: white;
-}
-#lower .events td:first-child {
-	line-height: 1;
-}
-
-#lower .day {
-	font-size: 200%;
-}
-#lower .month {
-	font-size: 125%;
-	text-transform: uppercase;
-}
-
-a.more {
-	border-top: 2.5px solid #ad0000;
-}
-
-#lower a {
-	color: hsl(200, 25%, 45%);
-}
-
-#lower a.btn {
-	background-color: hsl(200,25%,45%);
-	border-color: hsl(200,25%,45%);
-	color: white;
-}
-			</style>
-
-		<div id="lower" class="row row-eq-height small">
-			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
-				<h3>News</h3>
-				<table class="table table-striped table-sm">
-					<tbody>
-						<tr><td>
-							<a href="#">Todd Misener, PhD, Named Oklahoma State University’s Chief Wellness Officer</a>
-							<small class="d-block">Aug 09, 2017</small>
-						</td></tr>
-						<tr><td>
-							<a href="#">Abby Burns Hagemeyer, PhD, Lands CSTE Fellowship</a>
-							<small class="d-block">Aug 09, 2017</small>
-						</td></tr>
-						<tr><td>
-							<a href="#">MPH Student Hits “Trifecta” in Study Abroad Program in Uganda</a>
-							<small class="d-block">Aug 09, 2017</small>
-						</td></tr>
-						<tr><td>
-							<a href="#">Ghana-Sankofa Experience</a>
-							<small class="d-block">Aug 09, 2017</small>
-						</td></tr>
-						<tr><td>
-							<a href="#">Presenting the Center for Health Equity’s Racial Equity Youth Council</a>
-							<small class="d-block">Jul 26, 2017</small>
-						</td></tr>
-					</tbody>
-				</table>
-				<a href="#" class="more d-block mt-auto">More News</a>
-			</div>
-			<div class="events col-lg-3 col-md-6 d-flex flex-column mt-4">
-				<h3>Upcoming Events</h3>
-				<table class="table table-striped table-sm">
-					<tbody>
-						<tr>
-							<td class="text-center">
-								<div class="day">18</div>
-								<div class="month">Aug</div>
-								to
-								<div class="day">26</div>
-								<div class="month">Oct</div>
-							</td>
-							<td>
-								<a href="#">Gray Street Farmers Market</a>
-								<small class="d-block">400 Block of E. Gray Street (between S. Preston and S. Jackson)</small>
-							</td>
-						</tr>
-						<tr>
-							<td class="text-center">
-								<div class="day">14</div>
-								<div class="month">Sep</div>
-							</td>
-							<td>
-								<a href="#">EpiHour Seminar Series</a>
-								<small class="d-block">12:00 PM - 01:00 PM</small>
-							</td>
-						</tr>
-						<tr>
-							<td class="text-center">
-								<div class="day">19</div>
-								<div class="month">Sep</div>
-							</td>
-							<td>
-								<a href="#">SPHIS @ SOPHAS Virtual Fair</a>
-								<small class="d-block">11:00 AM - 03:00 PM</small>
-							</td>
-						</tr>
-						<tr>
-							<td class="text-center">
-								<div class="day">23</div>
-								<div class="month">Sep</div>
-							</td>
-							<td>
-								<a href="#">Kentuckiana Heart Walk</a>
-								<small class="d-block">09:00 AM - 12:00 PM </small>
-								<small class="d-block"> Waterfront Park's Great Lawn</small>
-							</td>
-						</tr>
-						<tr>
-							<td class="text-center">
-								<div class="day">06</div>
-								<div class="month">Nov</div>
-							</td>
-							<td>
-								<a href="#">Alumni &amp; Friends Reception at APHA</a>
-								<small class="d-block">06:30 PM - 08:30 PM </small>
-								<small class="d-block"> Spruce Room, Omni Atlanta Hotel at CNN Center</small>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="mt-auto" style="border-top: 2.5px solid #ad0000;">
-					<a href="#">Full Event Schedule</a>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
-				<h3>Popular Links</h3>
-				<table class="table table-striped table-sm"><tbody>
-					<tr><td><a href="#">MPH Program</a></td></tr>
-					<tr><td><a href="#">Admissions</a></td></tr>
-					<tr><td><a href="#">School Directory</a></td></tr>
-					<tr><td><a href="#">Sharepoint</a></td></tr>
-					<tr><td><a href="#">ULink</a></td></tr>
-					</tbody>
-				</table>
-				<div class="mt-auto" style="border-top: 2.5px solid #ad0000;">
-					&nbsp;
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 d-flex flex-column mt-4">
-				<h3>About SPHIS</h3>
-				<p class="text-center">
-					<img class="img-fluid" alt="SPHIS" src="//louisville.edu/sphis/ceph.png">
-					
-				</p>
-				<p class="text-center">
-					<a href="#" class="btn btn-info">Support SPHIS</a>
-				</p>
-				
-				<div class="mt-auto" style="border-top: 2.5px solid #ad0000;">
-					<a href="#">Learn More About SPHIS</a>
-				</div>
-			</div>
-		</div>
-		<style>
-		#social-media a {
-			color: hsl(200,25%,45%);;
+<head>
+    <meta charset="utf-8">
+    <title>SPHIS Home</title>
+    <meta name="description" content="">
+    <meta name="author" content="UofL Web Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/headers.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="css/editBar.css" />
+    <link rel="stylesheet" type="text/css" href="css/breadcrumbs.css" />
+    <link rel="stylesheet" type="text/css" href="css/footers.css" />
+    <link rel="stylesheet" type="text/css" href="css/prefooters.css" />
+    <link rel="stylesheet" type="text/css" href="css/themes/sphis_prime.css" id="themecss" />
+    <!--[if lt IE 9]>
+		<style type="text/css" media="all">
+		html body #sphis_banners .pager .activeSlide:before {
+			left: -23px !important;
 		}
 		</style>
-		
-		<div id="social-media" class="row justify-content-end mt-2">
-			<div class="col-auto">
-				stay connected
-			</div>
-			<div class="col-auto">
-				<a href="#"><i class="fa fa-twitter"><span class="sr-only">twitter</span></i></a>
-			</div>
-			<div class="col-auto">
-				<a href="#"><i class="fa fa-facebook"><span class="sr-only">Facebook</span></i></a>
-			</div>
-			<div class="col-auto">
-				<a href="#"><i class="fa fa-linkedin"><span class="sr-only">LinkedIn</span></i></a>
-			</div>
-			<div class="col-auto">
-				<a href="#"><i class="fa fa-youtube-play"><span class="sr-only">YouTube</span></i></a>
-			</div>
-		</div>
-	</div>
-	<style>
-footer {
-    background: #000000;
-    font-family: 'Open Sans', sans-serif;
-}
+    <![endif]-->
+</head>
+<body>
+  <header class="uofl">
+    <div id="navbar-wrapper" class="container">
+      <div class="row">
+        <div class="span3">
+          <a href="http://louisville.edu"><img src="img/logo-desktop-1.png"></a>
+        </div>
+        <div class="span9">
+          <div class="pull-right" id="nav-top">
+            <ul class="nav nav-pills hidden-desktop navbar-toggle">
+              <li><a data-toggle="collapse" data-target="#nav-main">Navigation <i class="icon-chevron-down">
+              </i><i class="icon-chevron-up"></i></a></li>
+            </ul>
+          </div>
+          <div id="nav-top-menu" class="nav-collapse unstyled">
+            <ul class="nav nav-pills">
+              <li><a href="#">Future Students</a> </li>
+              <li class="divider-vertical"></li>
+              <li><a href="#">Current Students</a> </li>
+              <li class="divider-vertical"></li>
+              <li><a href="#">Faculty & Staff</a> </li>
+              <li class="divider-vertical"></li>
+              <li><a href="#">Alumni & Donors</a> </li>
+              <li class="divider-vertical"></li>
+            </ul>
+          </div>
+        </div>  
+        <div class="pull-right" id="nav-bar">
+          <ul class="nav nav-pills hidden-desktop navbar-toggle pull-right">
+            <li><a data-toggle="collapse" data-target="#nav-main">Navigation <i class="icon-chevron-down">
+            </i><i class="icon-chevron-up"></i></a></li>
+          </ul>
+          <div id="nav-bar-menu" class="nav-collapse pull-right">
+            <ul class="nav nav-pills unstyled">
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Departments & Centers</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">About</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                    <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                    <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                    <li><a href="#">Department of Health Management & Systems Science</a></li>
+                    <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                    <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                    <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Academics</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Research</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Partnerships</a>
+                  <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">News</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Directory</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Contact</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Department of Bioinformatics & Biostatistics</a></li>
+                  <li><a href="#">Department of Environmental & Occupational Health Sciences</a></li>
+                  <li><a href="#">Department of Epidemiology & Population Health</a></li>
+                  <li><a href="#">Department of Health Management & Systems Science</a></li>
+                  <li><a href="#">Department of Health Promotion & Behavioral Sciences</a></li>
+                  <li><a href="#">Center for Health Hazards Preparedness (CHHP)</a></li>
+                  <li><a href="#">Statistical Consulting Center</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </header>
+    <div id="home-content" class="container">
+        <div class="row" id="marketing_banners">
+            <div class="span7">
+                <a href="#" class="wrapper">
+                    <img src="img/sphis/research.png">
+                </a>
+            </div>
+            <div class="span4" id="banner_text">
+                <h1>
+                    Research</h1>
+                <p>
+                    Creating knowledge by seeking new discoveries and understanding through scientific
+                    exploration.</p>
+            </div>
+        </div>
+        <div id="middle-portlets" class="row">
+            <div id="search" class="span3">
+                <div class="wrapper">
+                    <h3>
+                        Search the SPHIS Site:</h3>
+                    <div class="wrapper">
+                        <form class="search" action="http://search.louisville.edu/search"
+                        method="get">
+                        <div class="input-append">
+                        <input class="search input-medium" id="search-bar" type="search" results="10" size="25" name="q">
+                        <button id="btn-search" class="btn btn-primary" name="btnSearch" value="Go" type="submit">Go &raquo;</button>
+                    </div>
+                        <input type="hidden" name="entqr" value="0" />
+                        <input type="hidden" name="ud" value="1" />
+                        <input type="hidden" name="sort" value="date:D:L:d1" />
+                        <input type="hidden" name="output" value="xml_no_dtd" />
+                        <input type="hidden" name="oe" value="UTF-8" />
+                        <input type="hidden" name="ie" value="UTF-8" />
+                        <input type="hidden" name="client" value="uofl-frontend" />
+                        <input type="hidden" name="proxystylesheet" value="uofl-frontend" />
+                        <input type="hidden" name="site" value="default_collection" />
+                        <input type="hidden" name="as_sitesearch" value="louisville.edu/sphis" />
+                        </form>
+                    </div>
+                    <div id="pop-links">
+                        <h3>
+                            Popular Links:</h3>
+                        <div class="wrapper">
+                            <ul class="unstyled">
+                                <li class="odd"><a href="#">MPH Program</a></li>
+                                <li class="even"><a href="#">Admissions</a></li>
+                                <li class="odd"><a href="#">School Directory</a></li>
+                                <li class="even"><a href="#">Sharepoint</a></li>
+                                <li class="odd"><a href="#">ULink</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="span9">
+                <div class="wrapper">
+                    <img src="img/sphis/graystreet.png" class="pull-left news" />
+                    <h3>
+                        September 14, 2012 - News and Events</h3>
+                    <h2>
+                        <a href="#">Gray Street Farmers Market Now Open!</a></h2>
+                    <p class="secondary">
+                        The Gray Street Farmers Market is a combined effort to improve food access and have
+                        a positive impact on community and individual health, and runs every Thursday, starting
+                        May 19th through Oct. 27th in the 400 block of East Gray Street.
+                    </p>
+                    <button id="btn-events">
+                        Learn about our vendors &raquo;</button>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div id="lower-portlets" class="row">
+            <div id="news" class="span4">
+                <div class="wrapper">
+                    <h5>
+                        News</h5>
+                    <div class="bottom-row container">
+                        <img src="img/sphis/news-students.png" class="pull-left" />
+                        <p>
+                            <a href="#">SPHIS participates in Healthy Hoops</a> &raquo;</p>
+                        <p class="secondary">
+                            MPH students and faculty from SPHIS took part in the 3rd Annual Passport Health
+                            Plan's Healthy Hoops Kentucky Tip-Off event.</p>
+                    </div>
+                    <ul class="unstyled">
+                        <li><a href="#">SPHIS faculty, featured experts on radiation exposure</a></li>
+                        <li><a href="#">Students to present decision analysis for HPV vaccine strategies</a></li>
+                        <li><a href="#">Brock and Appana collaborate on study in Environmental Health Perspectives</a></li>
+                        <li><a href="#">SPHIS faculty, featured experts on radiation exposure</a></li>
+                    </ul>
+                </div>
+                <div id="more-news" class="more-phone-links visible-phone">
+                    <div class="wrapper">
+                        <a href="/sphis/news">More news</a> &raquo;
+                    </div>
+                </div>
+            </div>
+            <div id="events" class="span3">
+                <div class="wrapper">
+                    <h5>
+                        Upcoming events</h5>
+                    <ul class="unstyled">
+                        <li class="odd">
+                            <div class="row">
+                                <div class="pull-left">
+                                    <div class="day">
+                                        2</div>
+                                    <br />
+                                    <div class="month">
+                                        Jun</div>
+                                </div>
+                                <div class="description">
+                                    <a href="#">Gray Street Farmers' Market</a> &raquo;</div>
+                                <div class="time">
+                                    Thursdays, 10:30 am - 2 pm</div>
+                            </div>
+                        </li>
+                        <li class="even">
+                            <div class="row">
+                                <div class="pull-left">
+                                    <div class="day">
+                                        21</div>
+                                    <br />
+                                    <div class="month">
+                                        Jul</div>
+                                </div>
+                                <div class="description">
+                                    New Student Orientation</div>
+                                <div class="time">
+                                    9:30 am - 2:30 pm</div>
+                            </div>
+                        </li>
+                        <li class="odd">
+                            <div class="row">
+                                <div class="pull-left">
+                                    <div class="day">
+                                        5</div>
+                                    <br />
+                                    <div class="month">
+                                        Aug</div>
+                                </div>
+                                <div class="description">
+                                    Gray Street Farmers' Market</div>
+                                <div class="time">
+                                    Thursdays, 10:30 am - 2 pm</div>
+                            </div>
+                        </li>
+                        <li class="even">
+                            <div class="row">
+                                <div class="pull-left">
+                                    <div class="day">
+                                        19</div>
+                                    <br />
+                                    <div class="month">
+                                        Sep</div>
+                                </div>
+                                <div class="description">
+                                    Gray Street Farmers' Market</div>
+                                <div class="time">
+                                    Thursdays, 10:30 am - 2 pm</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="more-events" class="more-phone-links visible-phone">
+                    <div class="wrapper">
+                        <a href="/sphis/events">Full event schedule</a> &raquo;
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="span5">
+                <div class="wrapper">
+                    <h5>
+                        About SPHIS</h5>
+                    <div class="bottom-row">
+                        <p id="image">
+                            <img src="img/sphis/about.png" /></p>
+                    </div>
+                    <h6>
+                        A distinctive school of public health</h6>
+                    <p>
+                        Public health is about more than restaurant inspections, flu shots and managing
+                        health departments. It is identifying emerging health threats and risks, monitoring
+                        health factors and status, understanding how people seek and respond to health information
+                        and preparing responses to events that can affect the public's health.
+                    </p>
+                </div>
+                <div id="more-about" class="more-phone-links visible-phone">
+                    <div class="wrapper">
+                        <a href="/sphis/news">Learn more about SPHIS</a> &raquo;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower-links" class="row hidden-phone">
+            <div class="links span5">
+                <div class="wrapper">
+                    <a href="/sphis/news">More news</a> &raquo;
+                </div>
+            </div>
+            <div class="links span3">
+                <div class="wrapper">
+                    <a href="/sphis/events">Full event schedule</a> &raquo;
+                </div>
+            </div>
+            <div class="span4">
+                <div class="wrapper">
+                    <a href="/sphis/about">Learn more about SPHIS</a> &raquo;
+                </div>
+            </div>
+        </div>
+        <div id="social-media" class="row">
+            <div class="pull-right">
+                Stay connected
+                <a href="#"><img src="img/sphis/sm_cr.png" /></a>
+                &nbsp;
+                <a href="#"><img src="img/sphis/sm_fb.png" /></a>
+                &nbsp;
+                <a href="#"><img src="img/sphis/sm_in.png" /></a>
+                &nbsp;
+                <a href="#"><img src="img/sphis/sm_yt.png" /></a>
+            </div>
+        </div>
+    </div>
+    <footer class="black">
+<div class="container">
+    <div class="row">
+        <div class="span3">
+            <ul class="nav nav-pills">
+                <li id="copy"><a title="Go to louisville.edu" rel="tooltip" href="http://louisville.edu/">
+                    <img src="img/logo-footer.png" /></a></li>
+            </ul>
+        </div>
+        <div class="span7">
+            <ul class="nav nav-pills">
+                <li><a href="#">Contact</a> /</li>
+                <li class="dropdown dropup"><a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    Apply</a> /
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Undergraduate</a></li>
+                        <li><a href="#">Transfer</a></li>
+                        <li><a href="#">Graduate</a></li>
+                        <li><a href="#">Dentistry</a></li>
+                        <li><a href="#">Law</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Jobs</a> /</li>
+                <li><a href="#">Accessibility</a> /</li>
+                <li><a href="#">Emergency</a> /</li>
+                <li><a href="#">Email</a> /</li>
+                <li><a href="#">Blackboard</a> /</li>
+                <li><a href="#">Ulink</a></li>
+            </ul>
+        </div>
+        <div class="span2">
+            <ul class="nav nav-pills pull-right">
+                <li id="login-bottom" class="dropdown dropup"><a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    Login<i class="icon-cog"></i> </a>
+                    <ul class="dropdown-menu bottom-up">
+                        <li><a href="#">Exchange</a></li>
+                        <li><a href="#">CardMail</a></li>
+                        <li><a href="#">Blackboard</a></li>
+                        <li><a href="#">ULink</a></li>
+                        <li><a href="#">PeopleSoft</a></li>
+                        <li><a href="#">Plone</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-
-footer a#footer_logo {
-    background: url(//louisville.edu/img/secondary_sprite.png) no-repeat scroll 0 0 transparent;
-    height: 24px;
-    opacity: 0.8;
-    transition: opacity 0.5s ease 0s;
-    width: 108px;
-}
-
-#footer_menu div {
-	color: #aaa;
-}
-#footer_menu div a {
-	color: #aaa;
-}
-
-		</style>
-		<footer class="mt-4 py-3">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-sm-12 col-md-3">
-						<a id="footer_logo" href="http://louisville.edu" class="d-block my-2 mx-auto mx-md-0" title="University of Louisville"><span class="sr-only">University of Louisville</span></a>
-					</div>
-					<div class="col-sm-12 col-md-9 d-flex justify-content-md-end">
-						<div id="footer_menu" class="row d-flex small text-center text-uppercase">
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Contact" href="http://louisville.edu/contact.html">Contact</a></small></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Apply" href="http://louisville.edu/admissions/apply">Apply</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Jobs" href="http://louisville.edu/jobs/">Jobs</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Accessibility" href="http://louisville.edu/web/accessibility">Accessibility</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Emergency" href="http://louisville.edu/alerts/">Emergency</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Diversity" href="http://louisville.edu/diversity/">Diversity</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Email" href="http://louisville.edu/email/">Email</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="Blackboard" href="https://blackboard.louisville.edu/">Blackboard</a></div>
-							<div class="col-md-auto col-sm-6 py-2"><a alt="ULink" href="http://ulink.louisville.edu">ULink</a></div>
-						</div>
-					</div>
-					</div>
-				</div>
-			</div><!--/container-fixed-->
-		</footer>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
-	<script>
-		$(function () {
-			$('#banners').slick({
-				autoplay: true,
-				autoplaySpeed: 6000,
-				fade: true,
-				arrows: false
-			});
-		});
-	</script>
-
-
-</body></html>
+    </footer>
+    <script src="js/jquery.cycle.all.js" type="text/javascript"></script>
+    <script type="text/javascript">        jqbs('.dropdown-toggle').dropdown()</script>
+    <script type="text/javascript">        jqbs('#portlet-accordion').tab('show')</script>
+    <script type="text/javascript">        jqbs('#featured-links-accordion').tab('show')</script>
+    <script type="text/javascript">        jqbs('.carousel').carousel();</script>
+    <script type="text/javascript">
+        jqbs(document).ready(function () {
+            jqbs('#marketing_banners .banners').cycle({
+                slideResize: true,
+                timeout: 7000,
+                width: '100%',
+                height: '328px',
+                pager: '#marketing_banners_pager',
+                pagerAnchorBuilder: function (idx, slide) {
+                    var pager;
+                    var src = jqbs('#banner-' + idx).attr('src');
+                    src = src.substr(0, src.length - 4);
+                    pager = '<a href="#" data-slide="' + idx + '" class="pager_item">';
+                    pager += idx;
+                    pager += '</a>';
+                    return pager;
+                },
+                fit: true
+            });
+            jqbs('#marketing_banners_pager .pager_items').click(function (e) {
+                jqbs('#marketing_banners .banners').cycle(jqbs(this).data('slide'));
+            });
+        });
+    </script>
+</body>
+</html>

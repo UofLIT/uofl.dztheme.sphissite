@@ -1,0 +1,308 @@
+.flex-grow {
+	flex: 1;
+	-ms-flex: 1 1 100%;
+}
+/* IE 10-11 fixes */
+.flex-grow > * {
+	max-width: 100%;
+}
+.flex-column .flex-grow,
+.flex-column.flex-grow {
+	-ms-flex-preferred-size: auto;
+}
+@media (min-width: 769px) {
+	.flex-md-row .flex-grow {
+		-ms-flex-preferred-size: 100%;
+	}
+}
+
+body {
+	background-color: #f2f2f2;
+}
+a {
+	color: #ad0000;
+}
+header {
+	background-image: url('../../img/sphis/bkground.png');
+	background-repeat: repeat-x;
+}
+/* put on red and make sure fits for small phones */
+nav .navbar-toggler {
+	margin-top: 44.5px;
+	margin-left: -25px;
+	border-color: rgb(255,255,255) !important;
+}
+nav .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+.navbar { padding: 0; }
+.navbar-brand {
+	padding: 0;
+}
+/* fixes for IE 10 */
+/* for text not wrapping */
+@media (min-width: 992px) and (max-width: 1199px) {
+	_:-ms-input-placeholder, :root #nav1 .nav-item {
+		max-width: 105px;
+	}
+	/* undo for IE 11 */
+	_:-ms-fullscreen, :root #nav1 .nav-item {
+		max-width: none;
+	}
+}
+
+
+/* fixes for IE 11 */
+_:-ms-fullscreen, :root #navbarCollapse {
+	width: 100%;
+}
+_:-ms-fullscreen, :root #navbarCollapse > div.d-flex {
+	max-width: 100%;
+}
+_:-ms-fullscreen, :root nav .input-group .form-control {
+	flex-basis: auto;
+}
+
+/* fix for IE 10-11 */
+@media screen and (min-width:0\0) and (min-width: 992px) {
+	nav .navbar-collapse {
+		-ms-flex-preferred-size: auto;
+		flex-basis: auto;
+	}
+}
+
+/* all browsers */
+/* make 100% at md and below rather than only xs */
+@media (max-width: 991px) {
+	nav .form-inline .input-group {
+		width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	div.collapse > * {
+		height: 43px;
+	}
+
+	#nav1 {
+		background-color: #f2f2f2;
+		border: 1px solid black;
+		border-top-width: 0;
+	}
+
+	#nav1 .nav-item {
+		width: -min-content;
+	}
+
+	#nav1 .nav-link {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	#nav2 {
+		font-size: 10.4px;
+	}
+
+	div.collapse > ul.navbar-nav .nav-link {
+		color: white;
+	}
+}
+
+@media (max-width: 991px) {
+	#navbarCollapse {
+		background-color: #f2f2f2;
+		border: 1px solid white;
+		border-top-width: 0;
+	}
+}
+/* make fit on small screens */
+@media (max-width: 767px) {
+	.dropdown-item {
+		white-space: normal;
+	}
+}
+
+/*
+ * BANNERS
+ */
+#banners {
+	background-color: hsl(200, 25%, 45%);
+	border: 5px solid white;
+}
+#banners .slick-list {
+	overflow: hidden !important; /* not sure why visible, but makes screen super wide */
+}
+
+.banner {
+	display: none;
+}
+
+.banner-image div {
+	background-size: cover;
+	padding-top: 66.66%;
+}
+
+#banners .slick-list {
+	overflow: visible;
+}
+
+#banners h2,
+#banners h3,
+#banners a {
+	color: white !important;
+}
+#banners h2 {
+	font-size: 2.5rem;
+}
+
+#banners h3 {
+	font-size: 1.5rem;
+}
+@media (max-width: 991px) {
+	#banners h2 {
+		font-size: 2rem;
+	}
+	#banners h3 {
+		font-size: 1rem;
+	}
+}
+
+#banners a {
+	text-decoration: underline;
+}
+
+/* CTA */
+#cta a {
+	color: white;
+	text-transform: uppercase;
+}
+#cta div:first-child {
+	background-color: #ad0000;
+	color: white;
+	padding: 7.5px 15px;
+}
+
+.cta-action {
+	background: #333;
+	position: relative;
+	transition: background 0.4s, box-shadow 0.4s;
+	margin: 0;
+	padding-left: 32px;
+}
+
+.cta-action:hover {
+	background: #4a4a4a;
+}
+
+@media (min-width: 768px) {
+	#cta:hover .cta-action::before,
+	#cta:hover .cta-action::after {
+			background: #666;
+	}
+
+	.cta-action::before,
+	.cta-action::after {
+		background: #333;
+		box-shadow: -8px 0 0 #fff;
+		content: ' ';
+		display: block;
+		height: 50.4%;
+		position: absolute;
+		left: -16px;
+		top: 0;
+		transform: skew(30deg);
+		transition: background 0.4s;
+		width: 32px;
+		z-index: 3;
+	}
+
+	.cta-action::before {
+		top: auto;
+		bottom: 0;
+		transform: skew(-30deg);
+	}
+}
+
+/*
+ * FOCALS
+ */
+#focals .focal > div {
+	border: 0 solid #ad0000;
+	border-width: 5px 0 5px 0;
+	background-color: white;
+	height: 100%;
+}
+
+#focals .focal .focal-bg {
+	border-bottom: 2.5px solid #f2f2f2;
+	background-size: cover;
+	padding-top: 56.25%;
+}
+
+#focals .focal .focal-bg::before {
+	content: "";
+}
+
+/*
+ * LOWER
+ */
+#lower .footer {
+	border-top: 2.5px solid #ad0000;
+}
+#lower .footer:empty::after {
+	content: "\a0";
+}
+#lower .table-striped tbody tr:nth-of-type(odd) {
+	background-color: white;
+}
+#lower a {
+	color: hsl(200, 25%, 45%);
+}
+#lower a.btn {
+	background-color: hsl(200,25%,45%);
+	border-color: hsl(200,25%,45%);
+	color: white;
+}
+#events td {
+	vertical-align: middle;
+}
+#events td:first-child {
+	line-height: 1;
+}
+
+#events .day {
+	font-size: 150%;
+}
+#events .month {
+	text-transform: uppercase;
+}
+
+/*
+ * SOCIAL
+ */
+#social-media a {
+	color: hsl(200,25%,45%);;
+}
+
+/*
+ * FOOTER
+ */
+footer {
+	background: #000000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+footer a#footer_logo {
+	background: url(//louisville.edu/img/secondary_sprite.png) no-repeat scroll 0 0 transparent;
+	height: 24px;
+	opacity: 0.8;
+	transition: opacity 0.5s ease 0s;
+	width: 108px;
+}
+#footer_menu div {
+	color: #aaa;
+}
+
+#footer_menu div a {
+	color: #aaa;
+}

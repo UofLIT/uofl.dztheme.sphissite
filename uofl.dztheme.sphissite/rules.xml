@@ -1,328 +1,441 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rules
-    xmlns="http://namespaces.plone.org/diazo"
-    xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fn="http://www.w3.org/2006/xpath-functions">
+    	xmlns="http://namespaces.plone.org/diazo"
+		xmlns:css="http://namespaces.plone.org/diazo/css"
+		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+		xmlns:fn="http://www.w3.org/2006/xpath-functions">
 
-  <xsl:output indent="yes" />
-  <xsl:strip-space elements="*" />
-  <xml:template match="comment()"/>
+	<xsl:output indent="yes" />
+	<xsl:strip-space elements="*" />
+	<xml:template match="comment()"/>
 
-  <xsl:template css:match="li" mode="subnav">
-    <xsl:element name="dd">
-      <xsl:if css:test=".navTreeCurrentItem">
-        <xsl:attribute name="class">bold</xsl:attribute>
-      </xsl:if>
-      <xsl:element name="a">
-        <xsl:copy-of select="a/@href | a/@title" />
-        <xsl:copy-of select="a/span/text()" />
-      </xsl:element>
-    </xsl:element>
-  </xsl:template>
+	<xsl:template css:match="li" mode="subnav">
+		<xsl:element name="dd">
+			<xsl:if css:test=".navTreeCurrentItem">
+				<xsl:attribute name="class">bold</xsl:attribute>
+			</xsl:if>
+			<xsl:element name="a">
+				<xsl:copy-of select="a/@href | a/@title" />
+				<xsl:copy-of select="a/span/text()" />
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
 
-  <!-- Attribute Sets-->
-  <xsl:attribute-set name="a-accordion-collapse">
-    <xsl:attribute name="class">accordion-toggle</xsl:attribute>
-    <xsl:attribute name="data-parent">#portlet-accordion</xsl:attribute>
-    <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="a-dropdown-toggle">
-    <xsl:attribute name="class">dropdown-toggle</xsl:attribute>
-    <xsl:attribute name="data-toggle">dropdown</xsl:attribute>
-    <xsl:attribute name="href">#</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="a-folder-toggle" >
-    <xsl:attribute name="class">folder-toggle pull-right</xsl:attribute>
-    <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="a-toggle-tab">
-    <xsl:attribute name="data-toggle">tab</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="a-folder-link">
-    <xsl:attribute name="class">folder-link</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="a-feature-button">
-    <xsl:attribute name="class">btn btn-small pull-right btn-danger</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="b-caret">
-    <xsl:attribute name="class">caret</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="content-main">
-    <xsl:attribute name="class">container</xsl:attribute>
-    <xsl:attribute name="id">content-main</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="container">
-    <xsl:attribute name="class">container</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-accordion-group">
-    <xsl:attribute name="class">accordion-group</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-accordion-heading">
-    <xsl:attribute name="class">accordion-heading</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-accordion-body">
-    <xsl:attribute name="class">accordion-body collapse</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-accordion-inner">
-    <xsl:attribute name="class">accordion-inner</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-portlet-accordion">
-    <xsl:attribute name="class">accordion</xsl:attribute>
-    <xsl:attribute name="id">portlet-accordion</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-tab-content">
-    <xsl:attribute name="class">tab-content</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="div-tab-pane">
-    <xsl:attribute name="class">tab-pane</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="li-visible-desktop">
-    <xsl:attribute name="class">dropdown visible-desktop</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="li-hidden-folder" >
-    <xsl:attribute name="class">folder hidden-desktop</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="li-divider">
-    <xsl:attribute name="class">divider-vertical</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="li-dropdown">
-    <xsl:attribute name="class">dropdown</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="row">
-    <xsl:attribute name="class">row</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="row-fluid">
-    <xsl:attribute name="class">row-fluid</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="ul-dropdown-menu">
-    <xsl:attribute name="class">dropdown-menu</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="ul-nav-pills">
-    <xsl:attribute name="class">nav nav-pills</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="ul-nav-list">
-    <xsl:attribute name="class">nav nav-list</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="ul-nav-tabs">
-    <xsl:attribute name="class">nav nav-tabs</xsl:attribute>
-  </xsl:attribute-set>
-  <xsl:attribute-set name="ul-nav-pills-collapse">
-    <xsl:attribute name="class">nav nav-pills nav-collapse</xsl:attribute>
-  </xsl:attribute-set>
+	<!-- Attribute Sets-->
+	<xsl:attribute-set name="a-accordion-collapse">
+		<xsl:attribute name="class">accordion-toggle</xsl:attribute>
+		<xsl:attribute name="data-parent">#portlet-accordion</xsl:attribute>
+		<xsl:attribute name="data-toggle">collapse</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="a-dropdown-toggle">
+		<xsl:attribute name="class">dropdown-toggle</xsl:attribute>
+		<xsl:attribute name="data-toggle">dropdown</xsl:attribute>
+		<xsl:attribute name="href">#</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="a-folder-toggle" >
+		<xsl:attribute name="class">folder-toggle pull-right</xsl:attribute>
+		<xsl:attribute name="data-toggle">collapse</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="a-toggle-tab">
+		<xsl:attribute name="data-toggle">tab</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="a-folder-link">
+		<xsl:attribute name="class">folder-link</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="a-feature-button">
+		<xsl:attribute name="class">btn btn-small pull-right btn-danger</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="b-caret">
+		<xsl:attribute name="class">caret</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="content-main">
+		<xsl:attribute name="class">container</xsl:attribute>
+		<xsl:attribute name="id">content-main</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="container">
+		<xsl:attribute name="class">container</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-accordion-group">
+		<xsl:attribute name="class">accordion-group</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-accordion-heading">
+		<xsl:attribute name="class">accordion-heading</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-accordion-body">
+		<xsl:attribute name="class">accordion-body collapse</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-accordion-inner">
+		<xsl:attribute name="class">accordion-inner</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-portlet-accordion">
+		<xsl:attribute name="class">accordion</xsl:attribute>
+		<xsl:attribute name="id">portlet-accordion</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-tab-content">
+		<xsl:attribute name="class">tab-content</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="div-tab-pane">
+		<xsl:attribute name="class">tab-pane</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="li-visible-desktop">
+		<xsl:attribute name="class">dropdown visible-desktop</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="li-hidden-folder" >
+		<xsl:attribute name="class">folder hidden-desktop</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="li-divider">
+		<xsl:attribute name="class">divider-vertical</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="li-dropdown">
+		<xsl:attribute name="class">dropdown</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="row">
+		<xsl:attribute name="class">row</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="row-fluid">
+		<xsl:attribute name="class">row-fluid</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="ul-dropdown-menu">
+		<xsl:attribute name="class">dropdown-menu</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="ul-nav-pills">
+		<xsl:attribute name="class">nav nav-pills</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="ul-nav-list">
+		<xsl:attribute name="class">nav nav-list</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="ul-nav-tabs">
+		<xsl:attribute name="class">nav nav-tabs</xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="ul-nav-pills-collapse">
+		<xsl:attribute name="class">nav nav-pills nav-collapse</xsl:attribute>
+	</xsl:attribute-set>
 
-  <!-- declare the basic theme template and notheme rules -->
-  <notheme css:if-not-content="#visual-portal-wrapper" />
-  <notheme css:if-content="body.template-manage-portlets" />
-  <notheme if-content="//body[contains(@class, 'BootstrapRowPortlet')]" />
-  notheme if-content="//body[contains(@class, 'ContentRule')]" />
-  <notheme if-content="//body[contains(@class, 'Static')]" />
-  <notheme if-content="//body[contains(@class, 'template-plone.portlet')]" />
-  <notheme if-content="//body[contains(@class, 'template-portlets')]" />
+	<!-- declare the basic theme template and notheme rules -->
+	<notheme css:if-not-content="#visual-portal-wrapper" />
+	<notheme css:if-content="body.template-manage-portlets" />
+	<notheme if-content="//body[contains(@class, 'BootstrapRowPortlet')]" />
+	<notheme if-content="//body[contains(@class, 'bootstraprowportlet')]" />
+	<notheme if-content="//body[contains(@class, 'ContentRule')]" />
+	<notheme if-content="//body[contains(@class, 'contentrule')]" />
+	<notheme if-content="//body[contains(@class, 'Static')]" />
+	<notheme if-content="//body[contains(@class, 'static')]" />
+	<notheme if-content="//body[contains(@class, 'template-plone.portlet')]" />
+	<notheme if-content="//body[contains(@class, 'template-portlets')]" />
 	<notheme if-content="//body[contains(@class, 'portlet.feedmixer')]" />
-  <notheme css:if-content="body.template-overview-controlpanel" />
-  <notheme css:if-content="body.template-atct_edit" />
-  <notheme css:if-content="body.template-base_edit" />
-  <notheme css:if-content="body.template-edit" />
-  <notheme css:if-content="body.template-localcss-settings" />
-  <notheme css:if-content="body.template-calendar-controlpanel" />
-  <notheme css:if-content="body.template-prefs_install_products_form" />
-  <notheme css:if-content="body.section-portal_registry" />
-  <notheme css:if-content="body.template-discussion-settings" />
-  <notheme css:if-content="body.template-rules-controlpanel" />
-  <notheme css:if-content="body.template-editing-controlpanel" />
-  <notheme css:if-content="body.template-prefs_error_log_form" />
-  <notheme css:if-content="body.template-filter-controlpanel" />
-  <notheme css:if-content="body.template-imaging-controlpanel" />
-  <notheme css:if-content="body.template-language-controlpanel" />
-  <notheme css:if-content="body.template-mail-controlpanel" />
-  <notheme css:if-content="body.template-maintenance-controlpanel" />
-  <notheme css:if-content="body.template-markup-controlpanel" />
-  <notheme css:if-content="body.template-navigation-controlpanel" />
-  <notheme css:if-content="body.template-search-controlpanel" />
-  <notheme css:if-content="body.template-security-controlpanel" />
-  <notheme css:if-content="body.template-site-controlpanel" />
-  <notheme css:if-content="body.template-skins-controlpanel" />
-  <notheme css:if-content="body.template-tinymce-controlpanel" />
-  <notheme css:if-content="body.template-types-controlpanel" />
-  <notheme css:if-content="body.template-dropdownmenu-settings" />
-  <notheme css:if-content="body.template-googleanalytics-settings" />
-  <notheme css:if-content="body.template-jqueryui-controlpanel" />
-  <notheme css:if-content="body.template-jqueryui-plugins-controlpanel" />
-  <notheme css:if-content="body.template-jqueryui-sunburst-controlpanel" />
-  <notheme css:if-content="body.template-ldap-controlpanel" />
-  <notheme css:if-content="body.template-typekit-settings" />
-  <notheme css:if-content="body.template-hnfpicker-settings" />
+	<notheme css:if-content="body.template-overview-controlpanel" />
+	<notheme css:if-content="body.template-atct_edit" />
+	<notheme css:if-content="body.template-base_edit" />
+	<notheme css:if-content="body.template-edit" />
+	<notheme css:if-content="body.template-localcss-settings" />
+	<notheme css:if-content="body.template-calendar-controlpanel" />
+	<notheme css:if-content="body.template-prefs_install_products_form" />
+	<notheme css:if-content="body.section-portal_registry" />
+	<notheme css:if-content="body.template-discussion-settings" />
+	<notheme css:if-content="body.template-rules-controlpanel" />
+	<notheme css:if-content="body.template-editing-controlpanel" />
+	<notheme css:if-content="body.template-prefs_error_log_form" />
+	<notheme css:if-content="body.template-filter-controlpanel" />
+	<notheme css:if-content="body.template-imaging-controlpanel" />
+	<notheme css:if-content="body.template-language-controlpanel" />
+	<notheme css:if-content="body.template-mail-controlpanel" />
+	<notheme css:if-content="body.template-maintenance-controlpanel" />
+	<notheme css:if-content="body.template-markup-controlpanel" />
+	<notheme css:if-content="body.template-navigation-controlpanel" />
+	<notheme css:if-content="body.template-search-controlpanel" />
+	<notheme css:if-content="body.template-security-controlpanel" />
+	<notheme css:if-content="body.template-site-controlpanel" />
+	<notheme css:if-content="body.template-skins-controlpanel" />
+	<notheme css:if-content="body.template-tinymce-controlpanel" />
+	<notheme css:if-content="body.template-types-controlpanel" />
+	<notheme css:if-content="body.template-dropdownmenu-settings" />
+	<notheme css:if-content="body.template-googleanalytics-settings" />
+	<notheme css:if-content="body.template-jqueryui-controlpanel" />
+	<notheme css:if-content="body.template-jqueryui-plugins-controlpanel" />
+	<notheme css:if-content="body.template-jqueryui-sunburst-controlpanel" />
+	<notheme css:if-content="body.template-ldap-controlpanel" />
+	<notheme css:if-content="body.template-typekit-settings" />
+	<notheme css:if-content="body.template-hnfpicker-settings" />
 	<notheme css:if-content="body.template-useractions" />
 	<notheme css:if-content="body.template-manage-elements" />
-  <notheme if-path="folder_rename_form" />
+	<notheme if-path="folder_rename_form" />
 	<notheme if-path="folder_constraintypes_form" />
-  <notheme css:if-content="#edit-bar"  if="$preview_mode != 'True'" />
-  <notheme if="$ajax_load" />
+	<notheme css:if-content="#edit-bar"  if="$preview_mode != 'True'" />
+	<notheme if="$ajax_load" />
 
-  <!-- this rules block is always executed -->
-  <rules>
-    <!-- drop the static resource links of the theme -->
-    <drop theme="/html/head/style" />
-    <drop theme="/html/head/script" />
-    <drop theme="/html/head/meta" />
-    <drop theme="html/head/link[not(@id='navbarcss' or @id='themecss' or @id='nivo')]" />
 
-    <!-- IE best practices require meta and base tags before any other elements -->
-    <before theme-children="/html/head" content="/html/head/meta" />
-    <replace css:theme="base" css:content="base" />
-    <replace theme="/html/head/title" content="/html/head/title"/>
+	<xsl:template name="event">
+		<xsl:param name="dateText" />
+		<xsl:param name="locText" />
+		<xsl:param name="link" />
+		<xsl:variable name="singleDay" select="contains($dateText, ':') or true()" />
+		<tr>
+			<td class="text-center">
+				<xsl:variable name="startMon"  select="substring($dateText, 1, 3)" />
+				<xsl:variable name="startDay"  select="substring($dateText, 5, 2)" />
+				<div class="day"><xsl:value-of select="$startDay" /></div>
+				<div class="month"><xsl:value-of select="$startMon" /></div>
+				<xsl:if test="not($singleDay)">
+					<xsl:variable name="endMon"  select="substring($dateText, 16, 3)" />
+					<xsl:variable name="endDay"  select="substring($dateText, 20, 2)" />
+					<xsl:text>to</xsl:text>
+					<div class="day"><xsl:value-of select="$endDay" /></div>
+					<div class="month"><xsl:value-of select="$endMon" /></div>
+				</xsl:if>
+			</td>
+			<td>
+				<xsl:copy-of select="$link" />
+				<xsl:if test="$singleDay">
+					<small class="d-block"><xsl:value-of select="substring($dateText, 14)" /></small>
+				</xsl:if>
+				<small class="d-block"><xsl:value-of select="$locText" /></small>
+			</td>
+		</tr>
+	</xsl:template>
 
-    <!-- loop through the link tags (css files) from plone and choose the ones you want.  This should be the base css file located in uofl.basetheme and certain add-ons -->
-    <before theme="/html/head/link[1]" content="/html/head/link[contains(@href, 'responsive') or contains(@href, 'p4basetheme') or contains(@href, 'solgema') or contains(@href, 'calendar')]" />
+	<!-- homepage call to action variable -->
+	<xsl:variable name="cta"    select="//div[@id='portal-column-one']/div/dl[@class='portlet portletStaticText portlet-static-call-to-action']"/>
+	<xsl:variable name="focal1" select="//div[@id='portal-column-one']/div/dl[@class='portlet portletStaticText portlet-static-focal-1']"/>
+	<xsl:variable name="focal2" select="//div[@id='portal-column-one']/div/dl[@class='portlet portletStaticText portlet-static-focal-2']"/>
+	
+	<xsl:variable name="root" select="'sphis'"/>
 
-    <!-- style elements go last -->
-    <after content="/html/head/style" theme-children="/html/head" />
 
-    <!-- script tags go at the end before the theme defined -->
-    <before content="/html/head/script[contains(@src, 'p4basetheme')] | /html/head/script[not(@src) and not(contains(text(), 'datepicker'))]" theme="/html/body/script[1]" />
-    <after content="/html/head/script[contains(@src, 'flowplayer')] | /html/head/script[contains(@src, 'typekit')]" theme="/html/head/*[last()]" />
+	<!-- IE best practices require meta and base tags before any other elements -->
+	<before theme-children="/html/head" content="/html/head/meta" />
+	<replace css:theme="base" css:content="base" />
+	<replace theme="/html/head/title" content="/html/head/title"/>
 
-    <!-- merge the body classes -->
-    <merge attributes="class" css:theme="body" css:content="body" />
+	<!-- style elements go last -->
+	<after content="/html/head/style" theme-children="/html/head" />
 
-    <!-- set the global elements from uofl.basetheme -->
-    <replace css:theme="header" css:content="header.override" />
-    <replace css:theme-children="#document-title" css:content="#parent-fieldname-title" />
-    <drop css:content="footer .visible-phone" />
-    <replace css:theme="footer" css:content="footer" />
-    
-    <!-- site title
-    <replace css:theme-children="#site-title > h2">
-      <xsl:value-of select="$site_title" />
-    </replace>
-    -->
-    
-    <!--Transform for global navigation
-    <replace css:theme-children="#nav-main > ul.nav">
-      <xsl:for-each css:select="ul#portal-globalnav > li">
-        <xsl:choose>
-          <xsl:when test="a[@class='hasChildrens']">
-            <xsl:element name="li" use-attribute-sets="li-hidden-folder">
-              <xsl:element name="a" use-attribute-sets="a-folder-toggle">
-                <xsl:attribute name="data-target">
-                  <xsl:value-of select="concat('#folder', string(position()))" />
-                </xsl:attribute>
-                <xsl:element name="b" use-attribute-sets="b-caret" />
-              </xsl:element>
-              <xsl:element name="a" use-attribute-sets="a-folder-link">
-                <xsl:attribute name="href">
-                  <xsl:value-of select="a/@href" />
-                </xsl:attribute>
-                <xsl:value-of select="a" />
-              </xsl:element>
-              <xsl:element name="ul" use-attribute-sets="ul-nav-pills-collapse">
-                <xsl:attribute name="id">
-                  <xsl:value-of select="concat('folder', string(position()))" />
-                </xsl:attribute>
-                <xsl:for-each select="ul/li">
-                  <xsl:element name="li">
-                    <xsl:copy-of select="./a" />
-                  </xsl:element>
-                </xsl:for-each>
-              </xsl:element>
-            </xsl:element>
-            <xsl:element name="li" use-attribute-sets="li-visible-desktop">
-              <xsl:element name="a">
-                <xsl:attribute name="href">
-                  <xsl:value-of select="a/@href" />
-                </xsl:attribute>
-                <xsl:value-of select="fn:normalize-space(a)" />
-              </xsl:element>
-              <xsl:element name="a" use-attribute-sets="a-dropdown-toggle">
-                <xsl:element name="b">
-                  <xsl:attribute name="class">caret</xsl:attribute>
-                </xsl:element>
-              </xsl:element>
-              <xsl:element name="ul" use-attribute-sets="ul-dropdown-menu">
-                <xsl:for-each select="ul/li">
-                  <xsl:element name="li">
-                    <xsl:copy-of select="./a" />
-                  </xsl:element>
-                </xsl:for-each>
-              </xsl:element>
-            </xsl:element>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:copy-of select="." />
-          </xsl:otherwise>
-        </xsl:choose>
-        <xsl:if test="position() != last()">
-          <xsl:element name="li" use-attribute-sets="li-divider"></xsl:element>
-        </xsl:if>
-      </xsl:for-each>
+	<!-- add fb pixel -->
+	<append css:theme="head">
+		<script><![CDATA[
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window,document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '155349618552766'); 
+			fbq('track', 'PageView');
+		]]></script>
+		<noscript>
+			<img height="1" width="1" src="https://www.facebook.com/tr?id=155349618552766&amp;ev=PageView&amp;noscript=1" alt=" " />
+		</noscript>
+	</append>
 
-    </replace>
-    -->
-    
-    <!-- prefooter
-      <drop css:theme="#prefooter_wrapper" css:if-not-content="#prefooter-rows > div.portlet-bootstraprow-prefooter" />
-      <replace css:theme-children="#prefooter" css:content-children="#prefooter-rows > div.portlet-bootstraprow-prefooter" css:if-content="#prefooter-rows > div.portlet-bootstraprow-prefooter" />
-    -->
+	
 
-    <replace css:theme="#social-media" css:content="#prefooter-rows #social-media" />
-  </rules>
+	<!-- home page -->
+	<rules if-path="/ /home/ /copy_of_home/ /sphis/">
+		<theme href="home.htm" />
 
-  <!-- home page -->
-  <rules if-path="/">
-    <theme href="sphis-home.htm" />
+		<!-- cludo -->
+		<after content="/html/head/script[contains(@src, 'cludo')]" theme-children="/html/body" />
 
-    <!-- content -->
-    <replace css:theme="#marketing_banners" css:content="#marketing_banners" />
-    
-    <replace css:theme-children="#content > div.wrapper" css:content-children="#content-core > div:first-child" />
-    <replace css:theme-children="#pop-links" css:content-children="dl.portlet-static-popular-links dd" />
+		<!-- banners -->
+		<replace css:if-content=".portlet-static-banners"
+			css:theme-children="#banners"
+			css:content=".portlet-static-banners .banner" />
+		<replace css:if-content=".portlet-static-widget"
+			css:theme="#banners"
+			css:content-children=".portlet-static-widget .portletItem" />
 
-    <replace css:theme-children="#about > .wrapper" css:content-children="dl.portlet-static-about dd" />
-    <!--<replace css:theme-children="#news > div" css:content-children="dl.portlet-static-news dd" />-->
-    <replace css:theme-children="#lower-links" css:content-children="div.row.portlet-bootstraprow-bottom-more-links" />
-    
-    <!-- events portlet -->
-    <replace css:theme-children="#lower-portlets #events > .wrapper">
-      <xsl:for-each css:select="#portal-column-two dl.portletEvents">
-        <h5>Upcoming Events</h5>
-        <ul class="unstyled">
-          <xsl:for-each select="./dd">
-            <xsl:choose>
-              <xsl:when css:test=".portletItem">
-                <xsl:variable name="dateString" select="./span/span" />
-                <xsl:variable name="dateSub" select="substring-before($dateString, ',')" />
-                <xsl:variable name="timeSub" select="substring-after($dateString, ',')" />
-                <li>
-                  <div class="row">
-                    <div class="pull-left">
-                      <div class="day">
-                        <xsl:value-of select="substring-after($dateSub, ' ')" />
-                      </div>
-                      <br />
-                      <div class="month">
-                        <xsl:value-of select="substring-before($dateSub, ' ')" />
-                      </div>
-                    </div>
-                    <div class="description">
-                      <xsl:element name="a">
-                        <xsl:attribute name="href">
-                          <xsl:value-of select="./a/@href" />
-                        </xsl:attribute>
-                        <xsl:value-of select="./a/text()" />
-                      </xsl:element>
-                    </div>
-                    <div class="time">
-                      <xsl:value-of select="substring($timeSub, 7, 19)" />
-                    </div>
-                  </div>
-                </li>
-              </xsl:when>
-            </xsl:choose>
-          </xsl:for-each>
-        </ul>
-      </xsl:for-each>
-    </replace>
+		<!-- CTA -->
+		<drop if-not-content="$cta" css:theme="#cta" />
+		<replace
+			css:theme-children="#cta .cta-call h4"
+			content-children="$cta/dd[1]/h2[1]" />
+		<replace
+			css:theme-children="#cta .cta-call h5"
+			content-children="$cta/dd[1]/h3[1]" />
+		<replace
+			css:theme-children="#cta .cta-action"
+			content="$cta/dd[2]//a[1]" />
+
+		<!-- Focal 1 -->
+		<replace theme="//div[@id='focals']/div[1]//div[@class='focal-bg']">
+			<xsl:element name="div">
+				<xsl:attribute name="class">focal-bg</xsl:attribute>
+				<xsl:attribute name="style">
+					<xsl:value-of select="concat('background-image: url(', string($focal1//img[1]/@src), ')')" />
+				</xsl:attribute>
+			</xsl:element>
+		</replace>
+		<replace
+			theme="//div[@id='focals']/div[1]//h2[1]"
+			content="$focal1//h2[1]" />
+		<replace
+			theme-children="//div[@id='focals']/div[1]//div[@class='focal-body']"
+			content="$focal1//h2[1]/following-sibling::*" />
+		<replace
+			theme-children="//div[@id='focals']/div[1]//div[contains(@class,'focal-footer')]"
+			content="$focal1/dd[@class='portletFooter']//a[1]" />
+		
+		<!-- Focal 2 -->
+		<replace theme="//div[@id='focals']/div[2]//div[@class='focal-bg']">
+			<xsl:element name="div">
+				<xsl:attribute name="class">focal-bg</xsl:attribute>
+				<xsl:attribute name="style">
+					<xsl:value-of select="concat('background-image: url(', string($focal2//img[1]/@src), ')')" />
+				</xsl:attribute>
+			</xsl:element>
+		</replace>
+		<replace
+			theme="//div[@id='focals']/div[2]//h2[1]"
+			content="$focal2//h2[1]" />
+		<replace
+			theme-children="//div[@id='focals']/div[2]//div[@class='focal-body']"
+			content="$focal2//h2[1]/following-sibling::*" />
+		<replace
+			theme-children="//div[@id='focals']/div[2]//div[contains(@class,'focal-footer')]"
+			content="$focal2/dd[@class='portletFooter']//a[1]" />
+
+		<replace
+			css:theme-children="#news tbody">
+			<xsl:for-each select="//div[@id='portal-column-two']//dl[@class='portlet portletNews']/dd[contains(@class, 'portletItem')]">
+				<xsl:element name="tr">
+					<xsl:element name="td">
+						<xsl:copy-of select="./a"/>
+						<xsl:element name="small">
+							<xsl:attribute name="class">d-block</xsl:attribute>
+							<xsl:copy-of select="./span/text()"/>
+						</xsl:element>
+					</xsl:element>
+				</xsl:element>
+			</xsl:for-each>
+		</replace>
+		<copy attributes="href" css:theme="#news > a" content="//div[@id='portal-column-two']//dl[@class='portlet portletNews']/dd[@class='portletFooter']/a" />
+
+		<replace
+			css:theme-children="#events tbody">
+			<tr class="sr-only"><th>Date</th><th>Event</th></tr>
+			<tr class="d-none"></tr>
+			<xsl:for-each select="//div[@id='portal-column-two']//dl[@class='portlet portletEvents']/dd[contains(@class, 'portletItem')]">
+				<xsl:call-template name="event">
+					<xsl:with-param name="dateText" select="normalize-space(./span[@class='portletItemDetails']/span[1])"/>
+					<xsl:with-param name="locText"  select="substring-after(normalize-space(./span[@class='portletItemDetails']/span[2]), '— ')"/>
+					<xsl:with-param name="link" select="./a" />
+				</xsl:call-template>
+			</xsl:for-each>
+		</replace>
+		<copy attributes="href" css:theme="#events > a" content="//div[@id='portal-column-two']//dl[@class='portlet portletEvents']/dd[@class='portletFooter']/a" />
+
+		<merge attributes="class" theme="//div[@id='lower']/div[3]" content="//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][1]/dl" />
+		<replace theme-children="//div[@id='lower']/div[3]/h3">
+			<xsl:value-of select="normalize-space(//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][1]/dl/dt)" />
+		</replace>
+		<replace
+			theme-children="//div[@id='lower']/div[3]/div[1]"
+			content-children="//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][1]/dl/dd[1]"
+			/>
+		<replace
+			theme-children="//div[@id='lower']/div[3]/div[2]"
+			content-children="//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][1]/dl/dd[2]/span[2]"
+			/>
+
+		<merge attributes="class" theme="//div[@id='lower']/div[4]" content="//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][2]/dl" />
+		<replace theme-children="//div[@id='lower']/div[4]/h3">
+			<xsl:value-of select="normalize-space(//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][2]/dl/dt)" />
+		</replace>
+		<replace
+			theme-children="//div[@id='lower']/div[4]/div[1]"
+			content-children="//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][2]/dl/dd[1]"
+			/>
+		<replace
+			theme-children="//div[@id='lower']/div[4]/div[2]"
+			content-children="//div[@id='portal-column-two']/div[not(div/@class='portlet portletNews' or div/@class='portlet portletEvents')][2]/dl/dd[2]/span[2]"
+			/>
+	</rules>
+
+	<rules if-not-path="/ /home/ /copy_of_home/ /sphis/">
+		<!-- this rules block is always executed -->
+		<rules>
+			<!-- drop the static resource links of the theme -->
+			<drop theme="/html/head/style" />
+			<drop theme="/html/head/script" />
+			<drop theme="/html/head/meta" />
+			<drop theme="html/head/link[not(@id='navbarcss' or @id='themecss' or @id='nivo')]" />
+
+			<!-- loop through the link tags (css files) from plone and choose the ones you want.  This should be the base css file located in uofl.basetheme and certain add-ons -->
+			<before theme="/html/head/link[1]" content="/html/head/link[contains(@href, 'responsive') or contains(@href, 'p4basetheme') or contains(@href, 'solgema') or contains(@href, 'calendar')]" />
+
+			<!-- script tags go at the end before the theme defined -->
+			<before content="/html/head/script[contains(@src, 'p4basetheme')] | /html/head/script[not(@src) and not(contains(text(), 'datepicker'))]" theme="/html/body/script[1]" />
+			<after content="/html/head/script[contains(@src, 'flowplayer')] | /html/head/script[contains(@src, 'typekit')]" theme="/html/head/*[last()]" />
+			
+			<!-- cludo -->
+			<after content="/html/head/script[contains(@src, 'cludo')]" theme-children="/html/body" />
+
+			<!-- merge the body classes -->
+			<merge attributes="class" css:theme="body" css:content="body" />
+
+			<!-- set the global elements from uofl.basetheme -->
+			<replace css:theme="header" css:content="header.override" />
+			<replace css:theme-children="#document-title" css:content="#parent-fieldname-title" />
+			<drop css:content="footer .visible-phone" />
+			<replace css:theme="footer" css:content="footer" />
+			<replace css:theme="#social-media" css:content="#prefooter-rows #social-media" />
+		</rules>
+
+		<rules if-path="/">
+			<theme href="sphis-home.htm" />
+
+			<!-- content -->
+			<replace css:theme="#marketing_banners" css:content="#marketing_banners" />
+			
+			<replace css:theme-children="#content > div.wrapper" css:content-children="#content-core > div:first-child" />
+			<replace css:theme-children="#pop-links" css:content-children="dl.portlet-static-popular-links dd" />
+
+			<replace css:theme-children="#about > .wrapper" css:content-children="dl.portlet-static-about dd" />
+			<!--<replace css:theme-children="#news > div" css:content-children="dl.portlet-static-news dd" />-->
+			<replace css:theme-children="#lower-links" css:content-children="div.row.portlet-bootstraprow-bottom-more-links" />
+			
+			<!-- events portlet -->
+			<replace css:theme-children="#lower-portlets #events > .wrapper">
+				<xsl:for-each css:select="#portal-column-two dl.portletEvents">
+					<h5>Upcoming Events</h5>
+					<ul class="unstyled">
+						<xsl:for-each select="./dd">
+							<xsl:choose>
+								<xsl:when css:test=".portletItem">
+									<xsl:variable name="dateString" select="./span/span" />
+									<xsl:variable name="dateSub" select="substring-before($dateString, ',')" />
+									<xsl:variable name="timeSub" select="substring-after($dateString, ',')" />
+									<li>
+										<div class="row">
+											<div class="pull-left">
+												<div class="day">
+													<xsl:value-of select="substring-after($dateSub, ' ')" />
+												</div>
+												<br />
+												<div class="month">
+													<xsl:value-of select="substring-before($dateSub, ' ')" />
+												</div>
+											</div>
+											<div class="description">
+												<xsl:element name="a">
+													<xsl:attribute name="href">
+														<xsl:value-of select="./a/@href" />
+													</xsl:attribute>
+													<xsl:value-of select="./a/text()" />
+												</xsl:element>
+											</div>
+											<div class="time">
+												<xsl:value-of select="substring($timeSub, 7, 19)" />
+											</div>
+										</div>
+									</li>
+								</xsl:when>
+							</xsl:choose>
+						</xsl:for-each>
+					</ul>
+				</xsl:for-each>
+			</replace>
 
     <!-- news portlet -->
     <replace css:theme-children="#news > .wrapper">
@@ -352,10 +465,15 @@
       </xsl:for-each>
     </replace>
   </rules>
-
-  <rules if-not-path="/">
+	
     <!-- inner pages -->
     <rules if-path="/departments">
+
+      <rules if-path="/departments/chot">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/banner-images/red-stripes" />
+        </replace>
+      </rules>
 
       <rules if-path="/departments/yvprc">
         <replace css:theme="#bg-secondary img" >
@@ -522,166 +640,168 @@
     
     </rules>
 
-    <!-- events list -->
-    <replace css:theme="#events">
-      <xsl:for-each css:select="#portal-column-one dl.portletEvents">
-        <xsl:element name="div">
-          <xsl:attribute name="id">
-            <xsl:text disable-output-escaping="yes">events</xsl:text>
-          </xsl:attribute>
-          <h3>Upcoming Events</h3>
-          <xsl:element name="div">
-            <xsl:attribute name="class">
-              <xsl:text disable-output-escaping="yes">wrapper</xsl:text>
-            </xsl:attribute>
-            <ul class="unstyled">
-              <xsl:for-each select="./dd">
-                <xsl:choose>
-                  <xsl:when css:test=".portletItem">
-                    <xsl:variable name="dateString" select="./span/span" />
-                    <xsl:variable name="dateSub" select="substring-before($dateString, ',')" />
-                    <xsl:variable name="timeSub" select="substring-after($dateString, ',')" />
-                    <xsl:variable name="eventsLink" select="./dt/a/@href" />
-                    <li>
-                      <div class="row">
-                        <div class="pull-left">
-                          <div class="day">
-                            <xsl:value-of select="substring-after($dateSub, ' ')" />
-                          </div>
-                          <br />
-                          <div class="month">
-                            <xsl:value-of select="substring-before($dateSub, ' ')" />
-                          </div>
-                        </div>
-                        <div class="description">
-                          <xsl:element name="a">
-                            <xsl:attribute name="href">
-                              <xsl:value-of select="./a/@href" />
-                            </xsl:attribute>
-                            <xsl:value-of select="./a/text()" />
-                          </xsl:element>
-                        </div>
-                        <div class="time">
-                          <xsl:value-of select="substring($timeSub, 7, 19)" />
-                        </div>
-                      </div>
-                    </li>
-                  </xsl:when>
-                </xsl:choose>
-              </xsl:for-each>
-              <li class="even-more">
-                <a href="/sphis/events">
-                  Full event schedule
-                </a>
-              </li>
-            </ul>
-          </xsl:element>
-        </xsl:element>
-      </xsl:for-each>
-    </replace>
+		<!-- events list -->
+		<replace css:theme="#events">
+			<xsl:for-each css:select="#portal-column-one dl.portletEvents">
+				<xsl:element name="div">
+					<xsl:attribute name="id">
+						<xsl:text disable-output-escaping="yes">events</xsl:text>
+					</xsl:attribute>
+					<h3>Upcoming Events</h3>
+					<xsl:element name="div">
+						<xsl:attribute name="class">
+							<xsl:text disable-output-escaping="yes">wrapper</xsl:text>
+						</xsl:attribute>
+						<ul class="unstyled">
+							<xsl:for-each select="./dd">
+								<xsl:choose>
+									<xsl:when css:test=".portletItem">
+										<xsl:variable name="dateString" select="./span/span" />
+										<xsl:variable name="dateSub" select="substring-before($dateString, ',')" />
+										<xsl:variable name="timeSub" select="substring-after($dateString, ',')" />
+										<xsl:variable name="eventsLink" select="./dt/a/@href" />
+										<li>
+											<div class="row">
+												<div class="pull-left">
+													<div class="day">
+														<xsl:value-of select="substring-after($dateSub, ' ')" />
+													</div>
+													<br />
+													<div class="month">
+														<xsl:value-of select="substring-before($dateSub, ' ')" />
+													</div>
+												</div>
+												<div class="description">
+													<xsl:element name="a">
+														<xsl:attribute name="href">
+															<xsl:value-of select="./a/@href" />
+														</xsl:attribute>
+														<xsl:value-of select="./a/text()" />
+													</xsl:element>
+												</div>
+												<div class="time">
+													<xsl:value-of select="substring($timeSub, 7, 19)" />
+												</div>
+											</div>
+										</li>
+									</xsl:when>
+								</xsl:choose>
+							</xsl:for-each>
+							<li class="even-more">
+								<a href="/sphis/events">
+									Full event schedule
+								</a>
+							</li>
+						</ul>
+					</xsl:element>
+				</xsl:element>
+			</xsl:for-each>
+		</replace>
 
-    <!-- breadcrumbs -->
-    <replace css:theme-children="#breadcrumbs">
-      <xsl:for-each css:select="#portal-breadcrumbs a">
-        <xsl:choose>
-          <xsl:when test="position() = 1">
-            <xsl:copy>
-              <xsl:copy-of select="@*" />
-              SPHIS Home
-            </xsl:copy>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:text disable-output-escaping="yes"> » </xsl:text>
-            <xsl:copy-of select="." />
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:for-each>
-      <xsl:if css:test="#breadcrumbs-current">
-        <xsl:text disable-output-escaping="yes"> » </xsl:text>
-        <xsl:value-of css:select="#breadcrumbs-current" />
-      </xsl:if>
-    </replace>
-    
-    <!-- navigation -->
-    <replace theme-children="//div[contains(@id, 'header-flag-text')]" content-children="//div[contains(@id,'portal-column-one')]/div/dl/dd/ul/li[1]/div" css:if-content="#portal-column-one .portletNavigationTree" />
-    <replace theme-children="//div[contains(@id, 'header-flag-text')]/a" css:content-children="#parent-fieldname-title" css:if-not-content="#portal-column-one .portletNavigationTree" />
-    
-    <drop     css:if-not-content="#portal-column-one .portletNavigationTree" css:theme=         "#flag"/>
-    <replace  css:if-content=    "#portal-column-one .portletNavigationTree" css:theme-children="#flag dl">
-      <xsl:for-each select="//div[contains(@id,'portal-column-one')]/div/dl/dd/ul/li[position()>1]">
-        <xsl:element name="dt">
-          <xsl:choose>
-          <xsl:when test="position()=1">
-            <xsl:attribute name="class">flag-top</xsl:attribute>
-          </xsl:when>
-          <xsl:when css:test=".navTreeItemInPath">
-            <xsl:attribute name="class">flag-active</xsl:attribute>
-          </xsl:when>
-            <xsl:otherwise>
-              <xsl:attribute name="class">flag</xsl:attribute>
-            </xsl:otherwise>
-          </xsl:choose>
-          <xsl:element name="a">
-            <xsl:copy-of select="a/@href|a/@title" />
-            <xsl:value-of select="a//*/text()" />
-          </xsl:element>
-        </xsl:element>
-        <xsl:if test="self::*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItemInPath ') or (contains(concat(' ', normalize-space(@class), ' '), ' navTreeCurrentNode ') and contains(concat(' ', normalize-space(@class), ' '), ' navTreeFolderish '))]">
-          <xsl:apply-templates select="./ul/li" mode="subnav"/>
-        </xsl:if>
-      </xsl:for-each>
-    </replace>
+		<!-- breadcrumbs -->
+		<replace css:theme-children="#breadcrumbs">
+			<xsl:for-each css:select="#portal-breadcrumbs a">
+				<xsl:choose>
+					<xsl:when test="position() = 1">
+						<xsl:copy>
+							<xsl:copy-of select="@*" />
+							SPHIS Home
+						</xsl:copy>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:text disable-output-escaping="yes"> » </xsl:text>
+						<xsl:copy-of select="." />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
+			<xsl:if css:test="#breadcrumbs-current">
+				<xsl:text disable-output-escaping="yes"> » </xsl:text>
+				<xsl:value-of css:select="#breadcrumbs-current" />
+			</xsl:if>
+		</replace>
+		
+		<!-- navigation -->
+		<replace theme-children="//div[contains(@id, 'header-flag-text')]" content-children="//div[contains(@id,'portal-column-one')]/div/dl/dd/ul/li[1]/div" css:if-content="#portal-column-one .portletNavigationTree" />
+		<replace theme-children="//div[contains(@id, 'header-flag-text')]/a" css:content-children="#parent-fieldname-title" css:if-not-content="#portal-column-one .portletNavigationTree" />
+		
+		<drop     css:if-not-content="#portal-column-one .portletNavigationTree" css:theme=         "#flag"/>
+		<replace  css:if-content=    "#portal-column-one .portletNavigationTree" css:theme-children="#flag dl">
+			<xsl:for-each select="//div[contains(@id,'portal-column-one')]/div/dl/dd/ul/li[position()>1]">
+				<xsl:element name="dt">
+					<xsl:choose>
+					<xsl:when test="position()=1">
+						<xsl:attribute name="class">flag-top</xsl:attribute>
+					</xsl:when>
+					<xsl:when css:test=".navTreeItemInPath">
+						<xsl:attribute name="class">flag-active</xsl:attribute>
+					</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="class">flag</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:element name="a">
+						<xsl:copy-of select="a/@href|a/@title" />
+						<xsl:value-of select="a//*/text()" />
+					</xsl:element>
+				</xsl:element>
+				<xsl:if test="self::*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItemInPath ') or (contains(concat(' ', normalize-space(@class), ' '), ' navTreeCurrentNode ') and contains(concat(' ', normalize-space(@class), ' '), ' navTreeFolderish '))]">
+					<xsl:apply-templates select="./ul/li" mode="subnav"/>
+				</xsl:if>
+			</xsl:for-each>
+		</replace>
 
-    <!-- content area -->
-    <!--
-    <replace css:theme-children="h1" css:content-children="#parent-fieldname-title" css:if-content="#content"/>
-    <replace css:theme-children="#content-body .description" css:content-children="#parent-fieldname-description" css:if-content="#content"/>
-    <replace css:theme-children="#content-body .content" css:content-children="#content-core" />
-    -->
-    <rules css:if-not-content="body.template-solgemafullcalendar_view">
-      <drop css:theme="script.calendarjs" />
-      <drop theme="/html/body/div/div/div[contains(@id, 'content')]/div/*[not(contains(@id, 'breadcrumbs') or contains(@id, 'page-title') or contains(@class, 'primary'))]" />
-      <rules css:if-not-content="#content div.pfg-form">
-        
-        <rules css:if-content=".template-default_error_message">
-          <replace css:theme-children="#content h2" css:content-children="#content .documentFirstHeading" />
-          <replace css:theme-children="#content .wrapper" css:content-children="#content-core" />
-        </rules>
-        
-        <rules css:if-not-content=".template-default_error_message">
-          <replace css:theme-children="#content h2" css:content-children="#parent-fieldname-title" css:if-content="#content"/>
-          <replace css:theme-children="#content p.primary" css:content-children="#parent-fieldname-description" css:if-content="#content"/>
-          <rules css:if-content="#login_form">
-            <after css:theme-children="#content p.primary" css:content-children="#content-core" />
-          </rules>
-          <rules css:if-not-content="#login_form">
-            <rules if-path="events/ news/">
-              <after css:theme-children="#content p.primary" css:content-children="#content-core" />
-            </rules>
-            <rules if-not-path="events/ news/">
-              <after css:theme-children="#content p.primary" css:content-children="#content-core > div" />
-            </rules>
-          </rules>
-        </rules>
-      </rules>
+		<!-- content area -->
+		<!--
+		<replace css:theme-children="h1" css:content-children="#parent-fieldname-title" css:if-content="#content"/>
+		<replace css:theme-children="#content-body .description" css:content-children="#parent-fieldname-description" css:if-content="#content"/>
+		<replace css:theme-children="#content-body .content" css:content-children="#content-core" />
+		-->
+		<rules css:if-not-content="body.template-solgemafullcalendar_view">
+			<drop css:theme="script.calendarjs" />
+			<drop theme="/html/body/div/div/div[contains(@id, 'content')]/div/*[not(contains(@id, 'breadcrumbs') or contains(@id, 'page-title') or contains(@class, 'primary'))]" />
+			<rules css:if-not-content="#content div.pfg-form">
+				
+				<rules css:if-content=".template-default_error_message">
+					<replace css:theme-children="#content h2" css:content-children="#content .documentFirstHeading" />
+					<replace css:theme-children="#content .wrapper" css:content-children="#content-core" />
+				</rules>
+				
+				<rules css:if-not-content=".template-default_error_message">
+					<replace css:theme-children="#content h2" css:content-children="#parent-fieldname-title" css:if-content="#content"/>
+					<replace css:theme-children="#content p.primary" css:content-children="#parent-fieldname-description" css:if-content="#content"/>
+					<rules css:if-content="#login_form">
+						<after css:theme-children="#content p.primary" css:content-children="#content-core" />
+					</rules>
+					<rules css:if-not-content="#login_form">
+						<rules if-path="events/ news/">
+							<after css:theme-children="#content p.primary" css:content-children="#content-core" />
+						</rules>
+						<rules if-not-path="events/ news/">
+							<after css:theme-children="#content p.primary" css:content-children="#content-core > div" />
+						</rules>
+					</rules>
+				</rules>
+			</rules>
 
-      <rules css:if-content="#content div.pfg-form">
-        <replace css:theme-children="#content h2" css:content-children="h1.documentFirstHeading" />
-        <replace css:theme-children="#content p.primary" css:content-children="#content p.documentDescription" />
-        <after css:theme-children="#content p.primary" css:content="#content > div" />
-      </rules>
-    </rules>
-    <rules css:if-content="body.template-solgemafullcalendar_view">
-      <replace css:theme-children="#content h2" css:content-children="h1.documentFirstHeading" />
-      <replace css:theme-children="#content p.primary" css:content-children="#content p.documentDescription" />
-      <after css:theme-children="#content p.primary" css:content="#calendar" />
-    </rules>
+			<rules css:if-content="#content div.pfg-form">
+				<replace css:theme-children="#content h2" css:content-children="h1.documentFirstHeading" />
+				<replace css:theme-children="#content p.primary" css:content-children="#content p.documentDescription" />
+				<after css:theme-children="#content p.primary" css:content="#content > div" />
+			</rules>
+		</rules>
+		<rules css:if-content="body.template-solgemafullcalendar_view">
+			<replace css:theme-children="#content h2" css:content-children="h1.documentFirstHeading" />
+			<replace css:theme-children="#content p.primary" css:content-children="#content p.documentDescription" />
+			<after css:theme-children="#content p.primary" css:content="#calendar" />
+		</rules>
 
-  </rules>
+			<replace css:theme-children="#prefooter" css:content-children="#prefooter-rows > .row" />
+	<rules css:if-not-content="#prefooter-rows">
+		<drop css:theme="#prefooter_wrapper" />
+	</rules>
 
-  <replace css:theme-children="#prefooter" css:content-children="#prefooter-rows > .row" />
-  <rules css:if-not-content="#prefooter-rows">
-    <drop css:theme="#prefooter_wrapper" />
-  </rules>
+	</rules>
+
+
 
 </rules>

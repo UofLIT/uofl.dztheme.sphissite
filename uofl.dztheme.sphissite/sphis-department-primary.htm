@@ -194,22 +194,15 @@
                 </div>
             
 				<div id="search-events" class="wrapper">
-                <h3>Search the SPHIS Site:</h3>
-                <div class="wrapper"><form class="search" action="http://search.louisville.edu/search" method="get">
-                    <div class="input-append">
-                        <input class="search input-medium" id="search-bar" type="search" results="10" size="25" name="q">
-                        <button id="btn-search" class="btn btn-primary" name="btnSearch" value="Go" type="submit">Go &raquo;</button>
-                    </div>
-                    <input type="hidden" name="entqr" value="0">
-                    <input type="hidden" name="ud" value="1">
-                    <input type="hidden" name="sort" value="date:D:L:d1">
-                    <input type="hidden" name="output" value="xml_no_dtd">
-                    <input type="hidden" name="oe" value="UTF-8">
-                    <input type="hidden" name="ie" value="UTF-8">
-                    <input type="hidden" name="client" value="uofl-frontend">
-                    <input type="hidden" name="proxystylesheet" value="uofl-frontend">
-                    <input type="hidden" name="site" value="default_collection">
-                </form></div>
+                <h3>Search UofL:</h3>
+                <div class="wrapper">
+                    <form id="search-form" class="search">
+                        <div class="input-append">
+                            <input class="search input-medium" id="search-bar" type="search" results="10" size="25" name="q">
+                            <button id="btn-search" class="btn btn-primary" value="Go" type="submit">Go &raquo;</button>
+                        </div>
+                    </form>
+                </div>
 				    <div id="events"> 
                 <h3>Department news:</h3>    
                         <div class="wrapper">
