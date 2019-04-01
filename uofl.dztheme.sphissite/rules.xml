@@ -468,6 +468,36 @@
 	
     <!-- inner pages -->
 
+      <rules if-path="/departments/chhp">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Innovation.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/departments/stcc">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Parchment.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/departments/cik">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Loyalty.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/departments/yvprc">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Courage.jpg" />
+        </replace>
+      </rules>
+
+      <!-- use default rules if-path="/departments/chot">
+        <replace css:theme="#bg-secondary img" >
+          <img src="" />
+        </replace>
+      </rules -->
+
       <rules if-path="/departments/bioinformatics-biostatistics">
         <replace css:theme="#bg-secondary img" >
           <img src="/sphis/images/patterns/Prism%20Patterson%20Red.jpg" />

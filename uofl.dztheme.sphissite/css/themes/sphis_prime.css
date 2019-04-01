@@ -700,17 +700,6 @@ dl.main-secondary .flag-top
     line-height: 24px;
 }
 
-@media (min-width: 768px) {
-	body.department-primary #content {
-		margin-top: 150px;
-	}
-}
-@media (min-width: 768px) {
-	body.department-secondary #content {
-		/* margin-top: 50px; */
-	}
-}
-
 .bottom-row {
     background-color: #FFF;
     width: 100% !important;
