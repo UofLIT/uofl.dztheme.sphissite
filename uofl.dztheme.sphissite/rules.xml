@@ -467,65 +467,106 @@
   </rules>
 	
     <!-- inner pages -->
-    <rules if-path="/departments">
-
-      <rules if-path="/departments/chot">
-        <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/red-stripes" />
-        </replace>
-      </rules>
-
-      <rules if-path="/departments/yvprc">
-        <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/yvprc-banner.jpg" />
-        </replace>
-      </rules>
 
       <rules if-path="/departments/bioinformatics-biostatistics">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_bioinfo_biostats.png" />
+          <img src="/sphis/images/patterns/Prism%20Patterson%20Red.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/environmental-occupational-health-sciences">
+      <rules if-path="/departments/eohs">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_enviro_occp_health.png" />
+          <img src="/sphis/images/patterns/Prism%20Innovation.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/epidemiology-population-health">
+      <rules if-path="/departments/eph">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_epidemiology_pop_health.png" />
+          <img src="/sphis/images/patterns/Prism%20Parkway%20Field.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/health-management-systems-sciences">
+      <rules if-path="/departments/hmss">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_healthmgmt_systems.png" />
+          <img src="/sphis/images/patterns/Prism%20Courage.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/center-for-health-hazards-preparedness-chhp">
+      <rules if-path="/departments/hpbs">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_chhp.png" />
+          <img src="/sphis/images/patterns/Compass%20Ash.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/alumni-donors">
+      <rules if-path="/departments/chhp /departments/stcc /departments/cik /departments/yvprc /departments/chot">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_alumni.png" />
+          <img src="/sphis/images/patterns/Compass Ash.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/health-promotion-behavioral-sciences">
+      <rules if-path="/about">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/dept_health_promotion.png" />
+          <img src="/sphis/images/patterns/Compass%20Patterson.jpg" />
         </replace>
       </rules>
 
-      <rules if-path="/departments/commonwealth-institute-of-kentucky">
+      <rules if-path="/academics">
         <replace css:theme="#bg-secondary img" >
-          <img src="/sphis/banner-images/wordle" />
+          <img src="/sphis/images/patterns/Compass%20Parkways.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/research">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Loyalty.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/partnerships">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Parchment.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/news">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Courage.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/directory">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Innovation.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/contact">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Compass%20Bronze.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/future-students">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Prism%20Patterson%20Red.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/current-students">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Prism%20Courage.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/fac-staff-intranet">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Prism%20Swain%20Tobacco.jpg" />
+        </replace>
+      </rules>
+
+      <rules if-path="/alumni-donors">
+        <replace css:theme="#bg-secondary img" >
+          <img src="/sphis/images/patterns/Prism%20Loyalty.jpg" />
         </replace>
       </rules>
       
@@ -535,6 +576,8 @@
       <rules css:if-not-content="#breadcrumns-3">
         <theme href="sphis-department-primary.htm" />
       </rules>
+
+    <rules if-path="/departments">
 
       <!-- department news portlet -->
       <replace css:theme-children="#events ul">

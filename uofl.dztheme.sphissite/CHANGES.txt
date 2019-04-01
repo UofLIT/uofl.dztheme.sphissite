@@ -1,2 +1,6 @@
-1.0	original
+1.0.0	original
 1.0.1	added Commonwealth Institute of Kentucky banner
+2.0.0	new homepage
+2.0.1	footer alignment tweak
+2.0.2	color and font changes
+2.1.0	Cludo search
