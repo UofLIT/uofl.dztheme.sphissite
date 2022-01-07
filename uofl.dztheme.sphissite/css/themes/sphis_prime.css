@@ -606,6 +606,10 @@ dl.main-secondary .flag-top
     margin-top: -70px;
 }
 
+#search-events:first-child {
+	padding-top: 70px;
+}
+
 #search-events #events .wrapper {
     padding: 0 15px 15px 15px;
 }

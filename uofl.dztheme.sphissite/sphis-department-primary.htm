@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>SPHIS Departmental</title>
@@ -194,14 +194,22 @@
                 </div>
             
 				<div id="search-events" class="wrapper">
-                <h3>Search UofL:</h3>
+                <h3><label for="search-bar">Search:</label></h3>
                 <div class="wrapper">
-                    <form id="search-form" class="search">
-                        <div class="input-append">
-                            <input class="search input-medium" id="search-bar" type="search" results="10" size="25" name="q">
-                            <button id="btn-search" class="btn btn-primary" value="Go" type="submit">Go &raquo;</button>
-                        </div>
-                    </form>
+										<form method="get" action="https://search.louisville.edu/" style="margin: 0 15px;">
+											<div class="input-group">
+												<label class="sr-only" for="search-input">Search</label>
+												<div class="input-append" style="display: flex;">
+													<input id="search-input" name="q" type="search" style="flex-grow: 1;width: 1px;" class="form-control" placeholder="Search pages, people"><button class="btn btn-inverse" type="submit">
+													<div class="sr-only">Go</div>
+													<i class="icon-search icon-white"></i></button>
+												</div>
+											</div>
+											<select name="as_sitesearch">
+												<option value="">All UofL</option>
+												<option value="louisville.edu/sphis">SPHIS</option>
+											</select>
+										</form>
                 </div>
 				    <div id="events"> 
                 <h3>Department news:</h3>    
