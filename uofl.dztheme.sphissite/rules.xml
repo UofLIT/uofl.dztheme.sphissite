@@ -249,8 +249,8 @@
 	<rules if-path="/ /home/ /copy_of_home/ /sphis/">
 		<theme href="home.htm" />
 
-		<!-- cludo -->
-		<after content="/html/head/script[contains(@src, 'cludo')]" theme-children="/html/body" />
+		<!-- GTM -->
+		<after theme-children="/html/head" content="/html/head/comment()[contains(.,'End Google Tag Manager')]/preceding-sibling::script[1]" />
 
 		<!-- audience nav -->
 		<replace if-content="$audiencePortlet" css:theme-children="#nav1">
